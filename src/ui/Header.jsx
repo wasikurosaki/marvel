@@ -40,8 +40,13 @@ const Header = () => {
 
         {/* Pages Section for Larger Screens */}
         <div className="hidden md:flex space-x-6 font-semibold text-black">
-          <button className="hover:text-[#ce4a81]">Home</button>
-          <button className="hover:text-[#ce4a81]">About</button>
+          <button className="hover:text-[#ce4a81]">
+            <a href="">Home</a>
+          </button>
+          <button className="hover:text-[#ce4a81]">
+            {" "}
+            <a href="#about">About</a>
+          </button>
           <button className="hover:text-[#ce4a81]">Services</button>
           <button className="hover:text-[#ce4a81]">Portfolio</button>
           <button className="hover:text-[#ce4a81]">Contact</button>

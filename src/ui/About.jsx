@@ -4,7 +4,10 @@ import Logo from "../assets/Marvel Studies Final PNG-01.png"; // Adjust path if 
 
 const About = () => {
   return (
-    <div className="h-auto flex flex-col md:flex-row justify-around items-center mt-20 px-6 md:px-12">
+    <div
+      className="h-auto flex flex-col md:flex-row justify-around items-center mt-8 px-6 md:px-12"
+      id="about"
+    >
       {/* Left Section (Text) */}
       <motion.div
         className="flex flex-col gap-4 w-full md:w-1/2"
@@ -28,7 +31,7 @@ const About = () => {
       <motion.div
         className="w-full md:w-1/2 mt-6 md:mt-0 flex justify-center"
         initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1.8 }}
+        animate={{ opacity: 1, scale: 1.1 }}
         transition={{ delay: 0.5, duration: 3, ease: "easeOut" }}
       >
         <img

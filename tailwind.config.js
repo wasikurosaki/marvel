@@ -6,6 +6,9 @@ module.exports = {
       fontFamily: {
         marvel: ['"Marvel"', "sans-serif"],
       },
+      scrollBehavior: {
+        smooth: "smooth",
+      },
     },
   },
   plugins: [],
