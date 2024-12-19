@@ -12,7 +12,7 @@ const About = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.3, duration: 1, ease: "easeOut" }}
       >
-        <div className="font-bold md:text-5xl text-2xl text-[#30315f]">
+        <div className="font-extrabold md:text-5xl text-2xl text-[#30315f] font-marvel">
           Why Choose Us?
         </div>
         <div className="text-lg md:text-xl text-[#30315f] text-justify">

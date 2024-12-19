@@ -45,7 +45,7 @@ const Hero = () => {
 
       {/* Subtitle */}
       <motion.div
-        className="text-white md:font-semibold z-10 md:text-xl text-lg font-semibold mt-2"
+        className="text-white md:font-bold z-10 md:text-xl text-lg font-bold mt-2 font-marvel"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 1, ease: "easeOut" }}
@@ -54,7 +54,7 @@ const Hero = () => {
       </motion.div>
 
       <motion.button
-        className="mt-6 px-8 py-3 text-lg font-bold text-[#30315f] bg-white z-10 rounded-xl"
+        className="mt-6 px-8 py-3 text-lg md:text-xl font-extrabold text-[#30315f] bg-white z-10 rounded-xl font-marvel"
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
