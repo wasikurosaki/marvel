@@ -60,11 +60,11 @@ const Partners = () => {
   ];
 
   return (
-    <div className="w-full py-16 bg-[#30315f]">
+    <div className="w-full py-16 bg-[#FAF9F6]">
       <div className="max-w-7xl mx-auto px-4">
         {/* Title with orange underline */}
         <div className="text-center mb-20">
-          <h1 className="md:text-[4rem] text-3xl font-marvel font-extrabold text-white">
+          <h1 className="md:text-[4rem] text-3xl font-marvel font-extrabold text-[#30315f]">
             Education Partners
           </h1>
           <div className="w-16 h-1 bg-[#ce4a81] mx-auto mt-2"></div>

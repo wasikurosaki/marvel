@@ -4,43 +4,52 @@ import Logo from "../assets/Marvel Studies Final PNG-01.png"; // Adjust path if 
 
 const About = () => {
   return (
-    <div
-      className="h-auto flex flex-col md:flex-row justify-around items-center mt-8 px-6 md:px-12"
-      id="about"
-    >
-      {/* Left Section (Text) */}
-      <motion.div
-        className="flex flex-col gap-4 w-full md:w-1/2"
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.3, duration: 1, ease: "easeOut" }}
-      >
-        <div className="font-extrabold md:text-5xl text-2xl text-[#30315f] font-marvel">
-          Why Choose Us?
-        </div>
-        <div className="text-lg md:text-xl text-[#30315f] text-justify">
-          We provide a one-stop solution for everything from program selection
-          to visa processing, and post-visa services. Plus, we offer free
-          PTE/IELTS training, which is rare among consultancies. That means you
-          don’t have to run around to several institutions in the midst of all
-          your current responsibilities. We take care of all of it!
-        </div>
-      </motion.div>
+    <>
+      <div className="text-center mb-16">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-[#30315f] font-marvel">
+          About Us
+        </h1>
 
-      {/* Right Section (Image) */}
-      <motion.div
-        className="w-full md:w-1/2 mt-6 md:mt-0 flex justify-center"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1.1 }}
-        transition={{ delay: 0.5, duration: 3, ease: "easeOut" }}
+        <div className="w-20 h-1 bg-[#ce4a81] mx-auto mt-4"></div>
+      </div>
+      <div
+        className="flex flex-col md:flex-row h-auto md:h-[50vh] justify-around items-center px-6 md:px-12 mt-8"
+        id="about"
       >
-        <img
-          src={Logo}
-          alt="Marvel Logo"
-          className="h-[250px] md:h-[350px] object-contain"
-        />
-      </motion.div>
-    </div>
+        {/* Left Section (Text) */}
+        <motion.div
+          className="flex flex-col gap-6 w-full md:w-1/2"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.3, duration: 1, ease: "easeOut" }}
+        >
+          <p className="text-lg text-gray-600 max-w-xl mx-auto text-justify">
+            At Marvel Studies, we specialize in providing innovative,
+            research-driven solutions that help businesses excel. Our team is
+            dedicated to leveraging cutting-edge technologies to deliver
+            services that improve operations, streamline processes, and boost
+            profitability. Whether you're looking for expert guidance,
+            comprehensive solutions, or simply want to learn more about the
+            latest trends in the industry, we are here to assist you every step
+            of the way.
+          </p>
+        </motion.div>
+
+        {/* Right Section (Image) */}
+        <motion.div
+          className="w-full md:w-1/2 flex justify-center mt-6 md:mt-0"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.5, duration: 1, ease: "easeOut" }}
+        >
+          <img
+            src={Logo}
+            alt="Marvel Logo"
+            className="h-full max-h-[80vh] object-contain"
+          />
+        </motion.div>
+      </div>
+    </>
   );
 };
 
