@@ -4,9 +4,9 @@ import heroImage from "../assets/undraw_speech-to-text_4kov.svg";
 
 const Hero = () => {
   return (
-    <div className="min-h-[100vh] flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white">
+    <div className="h-[100vh] flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white">
       {/* Text Section */}
-      <div className="mt-40 md:mt-0 flex flex-col justify-center max-w-lg px-8 space-y-6 z-10 text-center md:text-left">
+      <div className="mt-60 md:mt-0 md:ml-20 ml-0 flex flex-col justify-center max-w-lg px-8 space-y-6 z-10 text-center md:text-left">
         <motion.h1
           className="text-4xl md:text-7xl font-extrabold leading-tight"
           initial={{ opacity: 0, x: -50 }}
@@ -49,7 +49,7 @@ const Hero = () => {
       </motion.div>
 
       {/* Angled Bottom Section */}
-      <div className="absolute bottom-0 w-full h-[10vh] bg-white clip-triangle"></div>
+      <div className="hidden md:block md:absolute md:bottom-0 md:w-full md:h-[15vh] bg-white clip-triangle"></div>
 
       <style jsx>{`
         .clip-triangle {

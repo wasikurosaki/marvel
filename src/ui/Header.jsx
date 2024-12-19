@@ -9,7 +9,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-white py-4 px-6 shadow-md font-mono z-50">
+    <header className="fixed top-0 left-0 w-full bg-white py-4 px-6 shadow-md font-extrabold z-50 font-marvel">
       {/* Main Header */}
       <div className="flex justify-between items-center">
         {/* Logo */}
