@@ -1,99 +1,214 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useRef, useState } from "react";
 
-// TagCloud component
-const Destination = () => {
-  const destinations = [
-    { name: "Australia", size: "huge", x: 30, y: 20 },
-    { name: "Sydney", size: "large", x: 15, y: 35 },
-    { name: "Gold Coast", size: "medium", x: 45, y: 15 },
-    { name: "Melbourne", size: "large", x: 60, y: 30 },
-    { name: "Perth", size: "small", x: 75, y: 40 },
-    { name: "Great Barrier Reef", size: "medium", x: 25, y: 50 },
-    { name: "Brisbane", size: "medium", x: 40, y: 45 },
-    { name: "Adelaide", size: "small", x: 55, y: 25 },
-    { name: "Darwin", size: "small", x: 70, y: 55 },
-    { name: "Tasmania", size: "medium", x: 85, y: 35 },
-    { name: "Uluru", size: "large", x: 20, y: 60 },
-    { name: "Blue Mountains", size: "medium", x: 35, y: 65 },
-    { name: "New Zealand", size: "large", x: 50, y: 40 },
-    { name: "Queenstown", size: "medium", x: 65, y: 45 },
-    { name: "Auckland", size: "medium", x: 80, y: 50 },
-    { name: "Fiji", size: "medium", x: 25, y: 30 },
-    { name: "Singapore", size: "large", x: 55, y: 55 },
-    { name: "Thailand", size: "medium", x: 70, y: 20 },
-    { name: "Japan", size: "large", x: 85, y: 60 },
+const TextCloud = ({ texts = [] }) => {
+  const containerRef = useRef(null);
+  const itemsRef = useRef([]);
+  const [items, setItems] = useState([]);
+  const [active, setActive] = useState(false);
+  const [mouseX, setMouseX] = useState(0);
+  const [mouseY, setMouseY] = useState(0);
+  const [mouseX0, setMouseX0] = useState(0);
+  const [mouseY0, setMouseY0] = useState(0);
+  const [hoveredItem, setHoveredItem] = useState(null);
+  const [hoveredCountry, setHoveredCountry] = useState(null);
 
-    // Additional destinations
-  ];
+  const radius = 180; // Increased radius for more spread
+  const size = 2.5 * radius; // Increased size to spread the items more
+  const maxSpeedVal = 0.8; // Slower speed
+  const initSpeedVal = 2; // Slower initial speed
+  const direction = 135;
 
-  const getSizeClasses = (size) => {
-    switch (size) {
-      case "huge":
-        return "text-3xl md:text-4xl font-extrabold";
-      case "large":
-        return "text-2xl md:text-3xl font-semibold";
-      case "medium":
-        return "text-xl md:text-2xl font-medium";
-      default:
-        return "text-lg md:text-xl font-light";
+  useEffect(() => {
+    setMouseX0(initSpeedVal * Math.sin(direction * (Math.PI / 180)));
+    setMouseY0(-initSpeedVal * Math.cos(direction * (Math.PI / 180)));
+    setMouseX(initSpeedVal * Math.sin(direction * (Math.PI / 180)));
+    setMouseY(-initSpeedVal * Math.cos(direction * (Math.PI / 180)));
+  }, []);
+
+  const computePosition = (index, random = false) => {
+    const total = texts.length;
+    if (random) {
+      index = Math.floor(Math.random() * (total + 1));
     }
-  };
+    const phi = Math.acos((2 * index + 1) / total - 1);
+    const theta = Math.sqrt((total + 1) * Math.PI) * phi;
 
-  // Random movement generator
-  const generateRandomMovement = () => {
     return {
-      x: Math.floor(Math.random() * 20) - 10, // Random value between -10 and 10
-      y: Math.floor(Math.random() * 20) - 10, // Random value between -10 and 10
+      x: (size * Math.cos(theta) * Math.sin(phi)) / 2,
+      y: (size * Math.sin(theta) * Math.sin(phi)) / 2,
+      z: (size * Math.cos(phi)) / 2,
+      scale: 0.8, // Smaller text scale
     };
   };
 
+  useEffect(() => {
+    const newItems = texts.map((text, index) => ({
+      text,
+      ...computePosition(index),
+    }));
+    setItems(newItems);
+    itemsRef.current = newItems;
+  }, [texts]);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const handleMouseMove = (e) => {
+      const rect = container.getBoundingClientRect();
+      setMouseX((e.clientX - (rect.left + rect.width / 2)) / 5);
+      setMouseY((e.clientY - (rect.top + rect.height / 2)) / 5);
+
+      // Check if mouse is within the radius of the sphere
+      const distanceFromCenter = Math.sqrt(
+        Math.pow(mouseX, 2) + Math.pow(mouseY, 2)
+      );
+      if (distanceFromCenter <= radius) {
+        setActive(false); // Stop the motion if mouse is inside the sphere area
+      } else {
+        setActive(true); // Resume motion when mouse is outside
+      }
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, [mouseX, mouseY]);
+
+  useEffect(() => {
+    const animate = () => {
+      if (!active) {
+        setMouseX((prev) => {
+          const diff = Math.abs(prev - mouseX0);
+          return diff < 1 ? mouseX0 : (prev + mouseX0) / 2;
+        });
+        setMouseY((prev) => {
+          const diff = Math.abs(prev - mouseY0);
+          return diff < 1 ? mouseY0 : (prev + mouseY0) / 2;
+        });
+      }
+
+      const a =
+        -(Math.min(Math.max(-mouseY, -size), size) / radius) * maxSpeedVal;
+      const b =
+        (Math.min(Math.max(-mouseX, -size), size) / radius) * maxSpeedVal;
+
+      if (Math.abs(a) <= 0.01 && Math.abs(b) <= 0.01) return;
+
+      const l = Math.PI / 180;
+      const sc = [
+        Math.sin(a * l),
+        Math.cos(a * l),
+        Math.sin(b * l),
+        Math.cos(b * l),
+      ];
+
+      setItems((prev) =>
+        prev.map((item) => {
+          const rx1 = item.x;
+          const ry1 = item.y * sc[1] + item.z * -sc[0];
+          const rz1 = item.y * sc[0] + item.z * sc[1];
+          const rx2 = rx1 * sc[3] + rz1 * sc[2];
+          const ry2 = ry1;
+          const rz2 = rz1 * sc[3] - rx1 * sc[2];
+          const scale = (2 * radius) / (2 * radius + rz2);
+
+          return {
+            ...item,
+            x: rx2,
+            y: ry2,
+            z: rz2,
+            scale,
+          };
+        })
+      );
+    };
+
+    const animationFrame = requestAnimationFrame(function loop() {
+      animate();
+      requestAnimationFrame(loop);
+    });
+
+    return () => cancelAnimationFrame(animationFrame);
+  }, [mouseX, mouseY, mouseX0, mouseY0, active]);
+
+  const countries = [
+    "USA",
+    "Canada",
+    "Brazil",
+    "India",
+    "Australia",
+    "Japan",
+    "Germany",
+    "South Korea",
+    "China",
+    "France",
+  ];
+
   return (
     <div
-      id="destination"
-      className="relative w-full md:h-[70vh] h-[100vh] bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white"
+      ref={containerRef}
+      className="absolute w-full h-full top-0 left-0 flex justify-center items-center"
+      onMouseEnter={() => setActive(true)}
+      onMouseLeave={() => setActive(false)}
     >
-      <div className="flex justify-center md:text-5xl text-3xl font-extrabold font-marvel text-white ">
-        <br></br>
-        Popular Destinations
-      </div>
-      {destinations.map((destination, index) => {
-        const { x, y } = generateRandomMovement(); // Generate random movement for each destination
+      {items.map((item, index) => {
+        const opacity = Math.max(0, item.scale * item.scale - 0.25).toFixed(3);
+        const showFullForm = hoveredItem === index;
+        const randomCountry =
+          countries[Math.floor(Math.random() * countries.length)];
+
         return (
-          <motion.div
+          <span
             key={index}
-            className={`absolute ${getSizeClasses(
-              destination.size
-            )} mt-16 group`}
+            className="absolute text-sm font-bold text-white cursor-pointer" // Smaller font size
             style={{
-              left: `${destination.x}%`,
-              top: `${destination.y}%`,
-              transformOrigin: "center",
+              zIndex: index + 1,
+              opacity,
+              transform: `translate3d(${(item.x - 0).toFixed(2)}px, ${(
+                item.y - 0
+              ).toFixed(2)}px, 0) scale(${item.scale})`,
+              transformOrigin: "50% 50%",
             }}
-            animate={{
-              opacity: 1,
-              x: [0, x, 0], // Random movement on x-axis
-              y: [0, y, 0], // Random movement on y-axis
-              scale: [1, 1.1, 1], // Scale effect for hover
-              rotate: [0, 10, 0], // Add rotation for dynamic feel
+            onMouseEnter={() => {
+              setHoveredItem(index);
+              setHoveredCountry(randomCountry); // Set the country when hovered
             }}
-            transition={{
-              repeat: Infinity,
-              repeatType: "reverse",
-              duration: 2,
-              ease: "easeInOut",
+            onMouseLeave={() => {
+              setHoveredItem(null);
+              setHoveredCountry(null); // Reset on mouse leave
             }}
           >
-            <span className="group relative">
-              <span className="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-opacity-80">
-                {destination.name}
-              </span>
-              {destination.name[0]}{" "}
-              {/* Display only the first letter initially */}
-            </span>
-          </motion.div>
+            {showFullForm ? hoveredCountry : item.text}{" "}
+            {/* Show the country only when hovered */}
+          </span>
         );
       })}
+    </div>
+  );
+};
+
+const Destination = () => {
+  const texts = Array(15).fill("M"); // Use "M" instead of "N"
+
+  return (
+    <div className="relative min-h-screen flex flex-col items-center justify-between p-8 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900">
+      <div className="max-w-4xl w-full">
+        {/* Title Section */}
+        <div className="text-center mb-8">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 font-marvel">
+            Popular Destinations
+          </h1>
+        </div>
+
+        {/* Text Cloud Section */}
+        <div className="rounded-xl p-8  mt-[18rem]">
+          <div className="flex flex-col items-center justify-center">
+            <div className="relative md:w-full w-3/4 md:h-full h-3/4">
+              <TextCloud texts={texts} />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
