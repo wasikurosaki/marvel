@@ -12,9 +12,10 @@ const TextCloud = ({ texts = [] }) => {
   const [hoveredItem, setHoveredItem] = useState(null);
   const [hoveredCountry, setHoveredCountry] = useState(null);
 
-  const radius = 180; // Increased radius for more spread
+  const isMobile = window.innerWidth < 768;
+  const radius = isMobile ? 100 : 180; // Increased radius for more spread
   const size = 2.5 * radius; // Increased size to spread the items more
-  const maxSpeedVal = 0.6; // Slower speed
+  const maxSpeedVal = 0.2; // Slower speed
   const initSpeedVal = 1; // Slower initial speed
   const direction = 135;
 
