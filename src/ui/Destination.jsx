@@ -15,7 +15,7 @@ const TextCloud = ({ texts = [] }) => {
   const isMobile = window.innerWidth < 768;
   const radius = isMobile ? 100 : 180; // Increased radius for more spread
   const size = 2.5 * radius; // Increased size to spread the items more
-  const maxSpeedVal = 0.2; // Slower speed
+  const maxSpeedVal = isMobile ? 0.2 : 0.3; // Slower speed
   const initSpeedVal = 1; // Slower initial speed
   const direction = 135;
 
