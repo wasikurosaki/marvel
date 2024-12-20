@@ -10,7 +10,7 @@ const About = () => {
           About Us
         </h1>
       </div>
-      <div className="flex flex-col md:flex-row h-auto md:h-[50vh] justify-around items-center px-6 md:px-12 mt-8">
+      <div className="flex flex-col md:flex-row h-auto md:h-[70vh] justify-around items-center px-6 md:px-12 mt-8">
         {/* Left Section (Text) */}
         <motion.div
           className="flex flex-col gap-6 w-full md:w-1/2"
@@ -40,7 +40,7 @@ const About = () => {
           <img
             src={Logo}
             alt="Marvel Logo"
-            className="h-auto md:w-[20rem] w-[15rem] object-contain md:mb-0 mb-4"
+            className="h-auto md:w-[20rem] w-[15rem] object-contain md:mb-0 mb-12"
           />
         </motion.div>
       </div>

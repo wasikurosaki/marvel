@@ -29,7 +29,7 @@ const FAQ = () => {
   return (
     <div
       id="faq"
-      className="faq-container flex items-center justify-center py-10 px-6 space-y-6 bg-[#FAF9F6] font-marvel"
+      className="faq-container flex items-center justify-center py-10 px-6 space-y-6 bg-[#FAF9F6] font-marvel h-[100vh]"
     >
       {/* Right Section with Questions */}
       <div className="faq-questions w-full max-w-3xl">

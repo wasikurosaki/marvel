@@ -14,8 +14,8 @@ const TextCloud = ({ texts = [] }) => {
 
   const radius = 180; // Increased radius for more spread
   const size = 2.5 * radius; // Increased size to spread the items more
-  const maxSpeedVal = 0.8; // Slower speed
-  const initSpeedVal = 2; // Slower initial speed
+  const maxSpeedVal = 0.6; // Slower speed
+  const initSpeedVal = 1; // Slower initial speed
   const direction = 135;
 
   useEffect(() => {
@@ -87,11 +87,12 @@ const TextCloud = ({ texts = [] }) => {
         });
       }
 
-      const a =
-        -(Math.min(Math.max(-mouseY, -size), size) / radius) * maxSpeedVal;
-      const b =
-        (Math.min(Math.max(-mouseX, -size), size) / radius) * maxSpeedVal;
+      // Limit the maximum speed to ensure it doesn't increase.
+      const maxSpeed = maxSpeedVal;
+      const a = -(Math.min(Math.max(-mouseY, -size), size) / radius) * maxSpeed;
+      const b = (Math.min(Math.max(-mouseX, -size), size) / radius) * maxSpeed;
 
+      // Ensure the motion speed remains consistent.
       if (Math.abs(a) <= 0.01 && Math.abs(b) <= 0.01) return;
 
       const l = Math.PI / 180;

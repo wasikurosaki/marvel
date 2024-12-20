@@ -6,10 +6,10 @@ const Hero = () => {
   return (
     <div
       id="home"
-      className="h-[100vh] flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-[#30315f] via-[#90427f] to-[#ce4a81] text-white"
+      className="h-[100vh] flex flex-col md:flex-row md:px-20 px-0 items-center justify-between bg-gradient-to-r from-[#30315f] via-[#90427f] to-[#ce4a81] text-white"
     >
       {/* Text Section */}
-      <div className="mt-60 md:mt-0 md:ml-20 ml-0 flex flex-col justify-center max-w-lg px-8 space-y-6 z-10 text-center md:text-left">
+      <div className="mt-60 md:mt-0 md:ml-10 ml-0 flex flex-col justify-center max-w-lg px-8 space-y-6 z-10 text-center md:text-left">
         <motion.h1
           className="text-4xl md:text-7xl font-extrabold leading-tight"
           initial={{ opacity: 0, x: -50 }}
