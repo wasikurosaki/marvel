@@ -27,18 +27,21 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="faq-container flex items-center justify-center py-10 px-6 space-y-6 bg-[#FAF9F6]">
+    <div
+      id="faq"
+      className="faq-container flex items-center justify-center py-10 px-6 space-y-6 bg-[#FAF9F6] font-marvel"
+    >
       {/* Right Section with Questions */}
       <div className="faq-questions w-full max-w-3xl">
         <motion.h2
-          className="text-4xl font-bold text-center mb-10 text-[#30315f]"
+          className="text-4xl font-bold text-center mb-2 text-[#30315f]"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           Here To Answer All Your Questoins!
         </motion.h2>
-        <motion.h3 className="justify-center flex mb-10 text-[#30315f]">
+        <motion.h3 className="justify-center flex mb-10 text-[#30315f] text-center">
           See if you find all the estions you need and join us for an adventure
         </motion.h3>
         <div className="space-y-6">

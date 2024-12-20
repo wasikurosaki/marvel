@@ -48,7 +48,7 @@ const Services = () => {
   });
 
   return (
-    <div className="bg-gray-50 py-16">
+    <div id="services" className="bg-gray-50 py-16">
       {/* Section Title */}
       <div className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-extrabold text-[#30315f] font-marvel">
@@ -58,7 +58,6 @@ const Services = () => {
           Discover the wide range of innovative and cutting-edge services we
           offer to help your business succeed.
         </p>
-        <div className="w-20 h-1 bg-[#ce4a81] mx-auto mt-4"></div>
       </div>
 
       {/* Services Grid */}
