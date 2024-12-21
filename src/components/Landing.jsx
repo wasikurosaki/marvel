@@ -21,8 +21,9 @@ const Landing = () => {
       <Partners />
       <Services />
       <Destination />
+      <Testmonials />
       <FAQ />
-      {/* <Testmonials /> */}
+
       <Contact />
       <Footer />
     </div>

@@ -1,80 +1,86 @@
-import React, { useState } from "react";
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-// Data for testimonials
-const testimonials = [
-  {
-    name: "Roger Scott",
-    position: "Marketing Manager",
-    message:
-      "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-    image: "images/person_1.jpg",
-  },
-  {
-    name: "Sarah White",
-    position: "Product Manager",
-    message:
-      "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-    image: "images/person_2.jpg",
-  },
-  {
-    name: "John Doe",
-    position: "Designer",
-    message:
-      "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-    image: "images/person_3.jpg",
-  },
-];
+const Testimonials = () => {
+  const testimonials = [
+    {
+      quote:
+        "This is an amazing product! It has completely transformed the way I work. Highly recommended. ",
+      name: "Jessica Smith",
+      role: "Product Marketer @Google",
+      image: "https://via.placeholder.com/80",
+    },
+    {
+      quote:
+        "I can't imagine my daily workflow without it. It's intuitive, fast, and reliable!",
+      name: "Craig Norton",
+      role: "Software Engineer @Amazon",
+      image: "https://via.placeholder.com/80",
+    },
+    {
+      quote:
+        "Great experience so far! The team has done a fantastic job creating such a helpful tool.",
+      name: "Sophia Lee",
+      role: "UX Designer @Facebook",
+      image: "https://via.placeholder.com/80",
+    },
+  ];
 
-const TestimonialSlider = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length
-    );
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
   };
 
   return (
-    <div className="relative w-full max-w-lg mx-auto bg-white p-8 rounded-lg shadow-md">
-      <div className="flex flex-col items-center space-y-8">
-        <div className="flex justify-between items-center w-full">
-          <button
-            className="p-2 bg-gray-200 rounded-full text-gray-600"
-            onClick={prevSlide}
-          >
-            &#60;
-          </button>
-          <div className="flex flex-col items-center">
-            <div
-              className="w-24 h-24 rounded-full bg-cover bg-center"
-              style={{
-                backgroundImage: `url(${testimonials[currentIndex].image})`,
-              }}
-            ></div>
-            <p className="mt-4 font-semibold text-xl">
-              {testimonials[currentIndex].name}
-            </p>
-            <p className="text-gray-500">
-              {testimonials[currentIndex].position}
-            </p>
-          </div>
-          <button
-            className="p-2 bg-gray-200 rounded-full text-gray-600"
-            onClick={nextSlide}
-          >
-            &#62;
-          </button>
+    <div className="relative bg-white">
+      {/* Upper section placeholder */}
+      <div className="h-60 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900"></div>
+
+      {/* Testimonials Section */}
+      <div className="absolute md:top-32 top-20 left-0 right-0 mx-auto bg-white shadow-lg  md:max-w-[80rem] max-w-[22rem] p-8 z-10">
+        <div className="text-center">
+          <h3 className="text-lg font-medium text-gray-600 mb-2">
+            Testimonials
+          </h3>
+          <h2 className="md:text-5xl text-3xl font-bold text-gray-800 mb-8">
+            What People Are Saying
+          </h2>
         </div>
-        <p className="text-center text-gray-700">
-          {testimonials[currentIndex].message}
-        </p>
+        <Slider {...settings}>
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className="p-6 flex flex-col items-center text-center justify-center"
+            >
+              <blockquote className="text-lg text-gray-700 italic mb-4">
+                "{testimonial.quote}"
+              </blockquote>
+              <img
+                src={testimonial.image}
+                alt={testimonial.name}
+                className="w-20 h-20 rounded-full border-2 border-gray-300 mb-4 mx-auto"
+              />
+              <div>
+                <strong className="text-gray-800 text-xl block">
+                  {testimonial.name}
+                </strong>
+                <span className="text-gray-600 text-sm">
+                  {testimonial.role}
+                </span>
+              </div>
+            </div>
+          ))}
+        </Slider>
       </div>
     </div>
   );
 };
 
-export default TestimonialSlider;
+export default Testimonials;

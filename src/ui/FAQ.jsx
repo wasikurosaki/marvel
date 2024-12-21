@@ -29,7 +29,7 @@ const FAQ = () => {
   return (
     <div
       id="faq"
-      className="faq-container flex items-center justify-center py-10 px-6 space-y-6 bg-[#FAF9F6] font-marvel h-[100vh]"
+      className="faq-container flex items-center justify-center py-10 px-6 space-y-6 bg-white font-marvel h-[100vh] z-0 md:mt-48 mt-60"
     >
       {/* Right Section with Questions */}
       <div className="faq-questions w-full max-w-3xl">
@@ -48,7 +48,7 @@ const FAQ = () => {
           {faqData.map((item, index) => (
             <motion.div
               key={index}
-              className="faq-item w-full p-6 bg-white rounded-lg shadow-md border border-gray-300 cursor-pointer hover:shadow-xl transition-all"
+              className="faq-item w-full p-6 bg-[#FAF9F6] rounded-lg shadow-md border border-gray-300 cursor-pointer hover:shadow-xl transition-all"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: index * 0.3 }}

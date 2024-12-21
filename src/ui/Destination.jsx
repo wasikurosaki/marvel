@@ -193,7 +193,7 @@ const Destination = () => {
   const texts = Array(15).fill("M"); // Use "M" instead of "N"
 
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-between p-8 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900">
+    <div className="relative md:max-h-[80vh] min-h-[90vh] flex flex-col items-center justify-between p-8 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 -z-10">
       <div className="max-w-4xl w-full">
         {/* Title Section */}
         <div className="text-center mb-8">
@@ -203,7 +203,7 @@ const Destination = () => {
         </div>
 
         {/* Text Cloud Section */}
-        <div className="rounded-xl p-8  mt-[18rem]">
+        <div className="rounded-xl p-8  md:mt-[18rem] mt-[18rem]">
           <div className="flex flex-col items-center justify-center">
             <div className="relative md:w-full w-3/4 md:h-full h-3/4">
               <TextCloud texts={texts} />

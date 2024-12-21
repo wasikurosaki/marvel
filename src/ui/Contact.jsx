@@ -25,10 +25,10 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="bg-[white] min-h-screen flex items-center justify-center px-4 font-marvel"
+      className="bg-[#FAF9F6] min-h-screen flex items-center justify-center px-4 font-marvel"
     >
       <motion.div
-        className="bg-[#FAF9F6] rounded-lg shadow-lg p-8 w-full my-10 md:mt-0 "
+        className="bg-white rounded-lg shadow-lg p-8 w-full my-10 md:mt-0 "
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }} // Trigger animation when 20% of the section is visible
