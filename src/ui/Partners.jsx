@@ -91,12 +91,15 @@ const Partners = () => {
   };
 
   return (
-    <div id="universities" className="w-full py-16 bg-[#FAF9F6]">
+    <div
+      id="universities"
+      className="w-full py-16 bg-[#FAF9F6] overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-4">
         {/* Title */}
         <div className="text-center mb-20">
-          <h1 className="md:text-[4rem] text-3xl font-marvel font-extrabold text-[#30315f]">
-            Select Your Country
+          <h1 className="md:text-[4rem] text-3xl  font-extrabold text-[#30315f]">
+            Our Partned Univiersities
           </h1>
         </div>
 
@@ -106,7 +109,7 @@ const Partners = () => {
             <button
               key={university.id}
               onClick={() => handleCountryChange(university.id)}
-              className="px-6 py-2 bg-[#30315f] text-white rounded-full text-lg font-semibold hover:bg-[#505f88] transition duration-300"
+              className="md:px-6 px-4 py-2 md:py-2 bg-[#30315f] text-white rounded-full md:text-lg text-md font-semibold hover:bg-[#505f88] transition duration-300"
             >
               {university.country}
             </button>
@@ -125,7 +128,7 @@ const Partners = () => {
                 <img
                   src={logo}
                   alt={`University ${index + 1}`}
-                  className="w-[350px] h-[350px] object-contain" // Larger logos
+                  className="md:w-[350px] md:h-[350px] object-contain" // Larger logos
                 />
               </div>
             ))}

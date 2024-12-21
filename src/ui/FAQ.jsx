@@ -10,9 +10,10 @@ const FAQ = () => {
 
   const faqData = [
     {
-      question: "What is Marvel Studies?",
+      question:
+        "1. How does Marvel Studies help students like me become academic superheroes?",
       answer:
-        "Marvel Studies is a research and learning hub focused on various fields of excellence, particularly in areas of science and technology.",
+        "Just like Nick Fury assembling the Avengers, we bring together your unique talents and guide you to achieve your academic goals. From career counseling and university selection to visa processing and post-arrival support, we’re your team of superheroes, helping you conquer every challenge on your education journey!",
     },
     {
       question: "How can I join Marvel Studies?",
@@ -24,12 +25,22 @@ const FAQ = () => {
       answer:
         "We offer programs in various fields, including Computer Science, Engineering, and Research Development, all designed to push boundaries and foster innovation.",
     },
+    {
+      question: "What is Marvel Studies?",
+      answer:
+        "Marvel Studies is a research and learning hub focused on various fields of excellence, particularly in areas of science and technology.",
+    },
+    {
+      question: "How can I join Marvel Studies?",
+      answer:
+        "You can apply through our official website, where we offer various programs and courses that you can enroll in.",
+    },
   ];
 
   return (
     <div
       id="faq"
-      className="faq-container flex items-center justify-center py-10 px-6 space-y-6 bg-white font-marvel h-[100vh] z-0 md:mt-48 mt-60"
+      className="faq-container flex items-center justify-center py-10 px-6 space-y-6 bg-white  h-auto z-0 md:mt-[380px] mt-96"
     >
       {/* Right Section with Questions */}
       <div className="faq-questions w-full max-w-3xl">
@@ -57,7 +68,7 @@ const FAQ = () => {
               <div className="flex justify-between items-center">
                 <motion.div
                   className="question text-xl font-semibold text-[#30315f]"
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.01 }}
                 >
                   {item.question}
                 </motion.div>

@@ -12,11 +12,11 @@ const TextCloud = ({ texts = [] }) => {
   const [hoveredItem, setHoveredItem] = useState(null);
   const [hoveredCountry, setHoveredCountry] = useState(null);
 
-  const isMobile = window.innerWidth < 768;
-  const radius = isMobile ? 100 : 180; // Increased radius for more spread
-  const size = 2.5 * radius; // Increased size to spread the items more
-  const maxSpeedVal = isMobile ? 0.2 : 0.3; // Slower speed
-  const initSpeedVal = 1; // Slower initial speed
+  const isMobile = window.innerWidth < 768; // Check if the screen width is mobile size
+  const radius = isMobile ? 100 : 180; // Smaller radius for mobile
+  const size = 2.5 * radius; // Keep the size proportional
+  const maxSpeedVal = isMobile ? 0.2 : 0.3; // Slower speed to decrease the speed of animation
+  const initSpeedVal = 1.5; // Initial speed remains the same
   const direction = 135;
 
   useEffect(() => {
@@ -193,17 +193,17 @@ const Destination = () => {
   const texts = Array(15).fill("M"); // Use "M" instead of "N"
 
   return (
-    <div className="relative md:max-h-[80vh] min-h-[90vh] flex flex-col items-center justify-between p-8 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 -z-10">
+    <div className="relative min-h-screen flex flex-col items-center justify-between p-8 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900">
       <div className="max-w-4xl w-full">
         {/* Title Section */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 font-marvel">
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4  md:mt-10 mt-6">
             Popular Destinations
           </h1>
         </div>
 
         {/* Text Cloud Section */}
-        <div className="rounded-xl p-8  md:mt-[18rem] mt-[18rem]">
+        <div className="rounded-xl p-8  mt-[18rem]">
           <div className="flex flex-col items-center justify-center">
             <div className="relative md:w-full w-3/4 md:h-full h-3/4">
               <TextCloud texts={texts} />
