@@ -90,7 +90,7 @@ const Hero = () => {
     <div className="flex flex-col justify-center items-center md:h-[125vh] h-[125vh] bg-white">
       {/* Hero Image */}
       <img
-        className="w-full h-auto mt-8 md:w-[820px] md:mt-[-150px] z-50"
+        className="w-full h-auto mt-8 md:w-[820px] md:mt-[-150px] z-10"
         src={heroImage}
         alt="Hero"
       />
@@ -100,7 +100,7 @@ const Hero = () => {
       </div>
 
       {/* Slider and Header Section */}
-      <div className="flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-10 py-2 bg-[#e9eaf7] z-50">
+      <div className="flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-10 py-2 bg-[#e9eaf7] z-10">
         {/* Left Section */}
         <div className="flex flex-col gap-4 md:w-1/3 text-left md:ml-32 ml-0">
           <h1 className="text-2xl md:text-3xl font-bold text-[#30315f]">
