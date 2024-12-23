@@ -98,7 +98,7 @@ const Partners = () => {
       <div className="max-w-7xl mx-auto px-4">
         {/* Title */}
         <div className="text-center mb-20">
-          <h1 className="md:text-[4rem] text-3xl  font-extrabold text-[#30315f]">
+          <h1 className="md:text-5xl text-3xl  font-extrabold text-[#30315f]">
             Our Partned Univiersities
           </h1>
         </div>

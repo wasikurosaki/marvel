@@ -10,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-white/40 backdrop-blur-lg py-4 px-6 md:px-20 shadow-md font-extrabold z-50 font-marvel border border-white/10">
+    <header className="fixed top-0 left-0 w-full bg-white/40 backdrop-blur-lg py-4 px-6 md:px-20 shadow-md font-' z-50  border border-white/10">
       {/* Main Header */}
       <div className="flex justify-between items-center">
         {/* Logo */}
@@ -40,7 +40,7 @@ const Header = () => {
         </button>
 
         {/* Pages Section for Larger Screens */}
-        <div className="hidden md:flex space-x-6 font-semibold text-black text-xl">
+        <div className="hidden md:flex space-x-6  text-black text-xl">
           <button className="hover:text-[#ce4a81]">
             <a href="#home">Home</a>
           </button>
@@ -49,7 +49,7 @@ const Header = () => {
             <a href="#about">About</a>
           </button>
           <button className="hover:text-[#ce4a81]">
-            <a href="#partners">Partners</a>
+            <a href="#universities">Partners</a>
           </button>
           <button className="hover:text-[#ce4a81]">
             <a href="#services">Services</a>
@@ -91,7 +91,7 @@ const Header = () => {
           <a className="w-full" href="#home">
             <button
               onClick={toggleMenu}
-              className="w-full text-center px-4 py-2 text-gray-700 font-semibold text-lg rounded-md hover:bg-gradient-to-r from-[#90427f] to-[#ce4a81] hover:text-white transition-all duration-200"
+              className="w-full text-center px-4 py-2 text-gray-700 font-' text-lg rounded-md hover:bg-gradient-to-r from-[#90427f] to-[#ce4a81] hover:text-white transition-all duration-200"
             >
               Home
             </button>
@@ -99,15 +99,15 @@ const Header = () => {
           <a className="w-full" href="#about">
             <button
               onClick={toggleMenu}
-              className="w-full text-center px-4 py-2 text-gray-700 font-semibold text-lg rounded-md hover:bg-gradient-to-r from-[#90427f] to-[#ce4a81] hover:text-white transition-all duration-200"
+              className="w-full text-center px-4 py-2 text-gray-700 font-' text-lg rounded-md hover:bg-gradient-to-r from-[#90427f] to-[#ce4a81] hover:text-white transition-all duration-200"
             >
               About
             </button>
           </a>
-          <a className="w-full" href="#partners">
+          <a className="w-full" href="#universities">
             <button
               onClick={toggleMenu}
-              className="w-full text-center px-4 py-2 text-gray-700 font-semibold text-lg rounded-md hover:bg-gradient-to-r from-[#90427f] to-[#ce4a81] hover:text-white transition-all duration-200"
+              className="w-full text-center px-4 py-2 text-gray-700 font-' text-lg rounded-md hover:bg-gradient-to-r from-[#90427f] to-[#ce4a81] hover:text-white transition-all duration-200"
             >
               Partners
             </button>
@@ -115,7 +115,7 @@ const Header = () => {
           <a className="w-full" href="#services">
             <button
               onClick={toggleMenu}
-              className="w-full text-center px-4 py-2 text-gray-700 font-semibold text-lg rounded-md hover:bg-gradient-to-r from-[#90427f] to-[#ce4a81] hover:text-white transition-all duration-200"
+              className="w-full text-center px-4 py-2 text-gray-700 font-' text-lg rounded-md hover:bg-gradient-to-r from-[#90427f] to-[#ce4a81] hover:text-white transition-all duration-200"
             >
               Services
             </button>
@@ -123,7 +123,7 @@ const Header = () => {
           <a className="w-full" href="#faq">
             <button
               onClick={toggleMenu}
-              className="w-full text-center px-4 py-2 text-gray-700 font-semibold text-lg rounded-md hover:bg-gradient-to-r from-[#90427f] to-[#ce4a81] hover:text-white transition-all duration-200"
+              className="w-full text-center px-4 py-2 text-gray-700 font-' text-lg rounded-md hover:bg-gradient-to-r from-[#90427f] to-[#ce4a81] hover:text-white transition-all duration-200"
             >
               FAQ
             </button>
@@ -131,7 +131,7 @@ const Header = () => {
           <a className="w-full" href="#contact">
             <button
               onClick={toggleMenu}
-              className="w-full text-center px-4 py-2 text-gray-700 font-semibold text-lg rounded-md hover:bg-gradient-to-r from-[#90427f] to-[#ce4a81] hover:text-white transition-all duration-200"
+              className="w-full text-center px-4 py-2 text-gray-700 font-' text-lg rounded-md hover:bg-gradient-to-r from-[#90427f] to-[#ce4a81] hover:text-white transition-all duration-200"
             >
               Contact
             </button>

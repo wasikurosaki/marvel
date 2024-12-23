@@ -1,62 +1,152 @@
 import React from "react";
 import { motion } from "framer-motion";
-import heroImage from "../assets/undraw_speech-to-text_4kov.svg";
+import Slider from "react-slick";
+import classNames from "classnames";
+import heroImage from "../assets/Text on plane on.png";
+import serviceIcon1 from "../assets/Marvel Studies Final PNG-01.png"; // Example service icons
+import serviceIcon2 from "../assets/Marvel Studies Final PNG-01.png";
+import serviceIcon3 from "../assets/Marvel Studies Final PNG-01.png";
+
+const services = [
+  {
+    id: 1,
+    icon: serviceIcon1,
+    label: "Career Counseling",
+    target: "#service1",
+    bgColor: "bg-red-100", // Tailwind class for pastel red
+    txt: "Professor X helps map your academic path and match you with the right courses.",
+  },
+  {
+    id: 2,
+    icon: serviceIcon2,
+    label: "University Selection",
+    target: "#service2",
+    bgColor: "bg-green-100", // Tailwind class for pastel green
+    txt: "Iron Man's precision helps you find the perfect university for your goals.",
+  },
+  {
+    id: 3,
+    icon: serviceIcon3,
+    label: "Application Assistance",
+    target: "#service3",
+    bgColor: "bg-blue-100", // Tailwind class for pastel blue
+    txt: "Spider-Man helps you with forms and personal statements to stand out.",
+  },
+  {
+    id: 4,
+    icon: serviceIcon1,
+    label: "Scholarship Guidance",
+    target: "#service4",
+    bgColor: "bg-yellow-100", // Tailwind class for pastel yellow
+    txt: "Captain America guides you through scholarship and funding opportunities.",
+  },
+  {
+    id: 5,
+    icon: serviceIcon2,
+    label: "Visa Processing",
+    target: "#service5",
+    bgColor: "bg-purple-100", // Tailwind class for pastel purple
+    txt: "Doctor Strange helps you navigate visa procedures for your future.",
+  },
+  {
+    id: 6,
+    icon: serviceIcon3,
+    label: "Pre-Departure Assistance",
+    target: "#service6",
+    bgColor: "bg-pink-100", // Tailwind class for pastel pink
+    txt: "Thor provides tips and insights to help you adapt and thrive.",
+  },
+  {
+    id: 7,
+    icon: serviceIcon1,
+    label: "Post-Arrival Support",
+    target: "#service7",
+    bgColor: "bg-teal-100", // Tailwind class for pastel teal
+    txt: "Black Panther supports your settlement and community connections.",
+  },
+  // {
+  //   id: 8,
+  //   icon: serviceIcon2,
+  //   label: "Test Preparation",
+  //   target: "#service8",
+  //   bgColor: "bg-orange-100", // Tailwind class for pastel orange
+  //   txt: "Hulk helps you smash through tests like IELTS and GMAT with tailored strategies.",
+  // },
+];
 
 const Hero = () => {
+  const sliderSettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+  };
+
   return (
-    <div className="flex flex-col">
-      <div
-        id="home"
-        className="h-[100vh] flex flex-col md:flex-row md:px-20 px-0 items-center justify-between bg-gradient-to-r from-[#30315f] via-[#90427f] to-[#ce4a81] text-white"
-      >
-        {/* Text Section */}
-        <div className="mt-60 md:mt-0 md:ml-10 ml-0 flex flex-col justify-center max-w-lg px-8 space-y-6 z-10 text-center md:text-left">
-          <motion.h1
-            className="text-4xl md:text-7xl font-extrabold leading-tight"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 }}
-          >
-            MARVEL STUDIES
-          </motion.h1>
-          <motion.p
-            className="text-lg md:text-2xl font-medium"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.3 }}
-          >
-            Where Excellence Starts
-          </motion.p>
-          <a href="#about">
-            <motion.button
-              className="bg-[#30315f] text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-gray-100 hover:text-[#30315f] transition-all"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0.6 }}
-              whileHover={{ scale: 1.1 }}
-            >
-              Discover Marvel
-            </motion.button>
+    <div className="flex flex-col justify-center items-center md:h-[125vh] h-[125vh] bg-white">
+      {/* Hero Image */}
+      <img
+        className="w-full h-auto mt-8 md:w-[820px] md:mt-[-150px]"
+        src={heroImage}
+        alt="Hero"
+      />
+
+      {/* Slider and Header Section */}
+      <div className="flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-10 py-2 bg-[#e9eaf7]">
+        {/* Left Section */}
+        <div className="flex flex-col gap-4 md:w-1/3 text-left md:ml-32 ml-0">
+          <h1 className="text-2xl md:text-3xl font-bold text-[#30315f]">
+            We serve…Whatever it takes
+          </h1>
+          <p className="text-sm md:text-md text-gray-600 md:text-left text-center">
+            Welcome to Marvel Studies, where the power of dreams meets the
+            determination to make them a reality!
+          </p>
+          <a href="#contact">
+            <button className="px-6 py-2 w-full md:w-[250px] bg-[#30315f] text-white rounded-full text-sm font-semibold hover:bg-[#505f88] transition duration-300 mt-6">
+              Book a consultation now!
+            </button>
           </a>
         </div>
 
-        {/* Illustration Section */}
-        <motion.div
-          className="w-[350px] md:w-[500px] max-w-full z-20"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-        >
-          <img
-            src={heroImage} // Replace this with the URL of your Undraw PNG or SVG
-            alt="Illustration"
-            className="w-full h-auto"
-          />
-        </motion.div>
+        {/* Right Section (Slider) */}
+        <div className="block md:w-[300px] w-[200px] mt-8 md:mt-0 md:mr-32 mr-0">
+          <Slider {...sliderSettings}>
+            {services.map((service) => (
+              <motion.div
+                whileHover={{ y: -8 }} // Rise up on hover
+                transition={{ type: "spring", stiffness: 300 }}
+                key={service.id}
+                className={classNames(
+                  "flex flex-col items-center justify-center rounded-xl  my-8 h-[200px]",
+                  service.bgColor // Dynamic Tailwind class for background color
+                )}
+              >
+                <div className=" flex justify-center mb-4 mt-2">
+                  <a href="#services">
+                    <img
+                      className="w-24 md:w-32 h-auto object-contain my-[-30px]"
+                      src={service.icon}
+                      alt={service.label}
+                    />
+                  </a>
+                </div>
 
-        {/* Angled Bottom Section */}
+                <h1 className="text-lg md:text-xl font-semibold pb-2 text-center text-[#30315f] mt-10  ">
+                  {service.label}
+                </h1>
+                <p className="text-sm md:text-md text-gray-600 font-semibold px-4 pb-6 text-center">
+                  Learn More!
+                </p>
+              </motion.div>
+            ))}
+          </Slider>
+        </div>
       </div>
-      {/* <div>asd</div> */}
     </div>
   );
 };

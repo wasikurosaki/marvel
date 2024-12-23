@@ -45,7 +45,7 @@ const FAQ = () => {
       {/* Right Section with Questions */}
       <div className="faq-questions w-full max-w-3xl">
         <motion.h2
-          className="text-4xl font-bold text-center mb-2 text-[#30315f]"
+          className="md:text-5xl text-3xl font-bold text-center mb-2 text-[#30315f]"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -53,7 +53,8 @@ const FAQ = () => {
           Here To Answer All Your Questoins!
         </motion.h2>
         <motion.h3 className="justify-center flex mb-10 text-[#30315f] text-center">
-          See if you find all the estions you need and join us for an adventure
+          See if you find all the questions you need and join us for an
+          adventure
         </motion.h3>
         <div className="space-y-6">
           {faqData.map((item, index) => (
@@ -67,7 +68,7 @@ const FAQ = () => {
             >
               <div className="flex justify-between items-center">
                 <motion.div
-                  className="question text-xl font-semibold text-[#30315f]"
+                  className="question md:text-xl text-md font-semibold text-[#30315f]"
                   whileHover={{ scale: 1.01 }}
                 >
                   {item.question}
@@ -81,7 +82,7 @@ const FAQ = () => {
                 </motion.div>
               </div>
               <motion.div
-                className={`answer mt-4 text-lg transition-all duration-300 ease-in-out ${
+                className={`answer mt-4 md:text-lg text-sm transition-all duration-300 ease-in-out ${
                   activeQuestion === index
                     ? "max-h-screen opacity-100"
                     : "max-h-0 opacity-0"

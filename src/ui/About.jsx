@@ -5,10 +5,9 @@ import Logo from "../assets/Marvel Studies Final PNG-01.png"; // Adjust path if 
 const About = () => {
   return (
     <>
-      <div className="md:mt-10 mt-0">
-        {" "}
+      <div className="md:mt-[-7rem] mt-0 h-auto md:mb-0 ">
         <div className="text-center " id="about">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-[#30315f] font-mono mt-4">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-[#30315f] font-mono md:mb-0 mb-6">
             About Us
           </h1>
         </div>
@@ -21,14 +20,35 @@ const About = () => {
             transition={{ delay: 0.3, duration: 1, ease: "easeOut" }}
           >
             <p className="text-lg text-gray-600 max-w-xl mx-auto text-justify">
-              At Marvel Studies, we specialize in providing innovative,
-              research-driven solutions that help businesses excel. Our team is
-              dedicated to leveraging cutting-edge technologies to deliver
-              services that improve operations, streamline processes, and boost
-              profitability. Whether you're looking for expert guidance,
-              comprehensive solutions, or simply want to learn more about the
-              latest trends in the industry, we are here to assist you every
-              step of the way.
+              Dreaming of studying in{" "}
+              <span className="font-bold text-[#30315f]">
+                the UK, USA, Australia, Malaysia, New Zealand, or Denmark
+              </span>
+              ? We’ve got you covered. Whether you’re starting fresh with a{" "}
+              <span className="font-bold text-[#30315f]">
+                Foundation Course
+              </span>
+              , diving into a{" "}
+              <span className="font-bold text-[#30315f]">
+                Bachelor’s Degree
+              </span>
+              , or leveling up with a{" "}
+              <span className="font-bold text-[#30315f]">
+                Master’s or Pre-Master’s Program
+              </span>
+              , our expert guidance ensures a seamless journey from application
+              to acceptance. With a proven track record of success stories,
+              particularly in destinations like{" "}
+              <span className="font-bold text-[#30315f]">Australia</span> and
+              the <span className="font-bold text-[#30315f]">UK</span>, we pride
+              ourselves on making the impossible possible. From crafting
+              compelling applications to navigating{" "}
+              <span className="font-bold text-[#30315f]">
+                visa complexities
+              </span>
+              , we’ll stand by your side like a true{" "}
+              <span className="font-bold text-[#30315f]">Avenger squad</span>,
+              equipped with unmatched dedication and expertise.
             </p>
           </motion.div>
 

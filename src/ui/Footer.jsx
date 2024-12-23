@@ -19,8 +19,8 @@ const Footer = () => {
         {/* Location Section */}
         <div className="flex flex-col items-center text-center">
           <p className="text-white text-xl">
-            123 Marvel Lane, <br />
-            Superhero City, USA 90210
+            Flat 4A, House 44, Block D<br /> Road 8, Niketon, Gulshan 1, Dhaka
+            -1212
           </p>
         </div>
 

@@ -51,12 +51,13 @@ const Services = () => {
     <div id="services" className="bg-gray-50 py-16">
       {/* Section Title */}
       <div className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-[#30315f] font-marvel">
+        <h1 className="text-3xl md:text-5xl font-extrabold text-[#30315f] ">
           Our Services
         </h1>
         <p className="text-lg text-gray-600 mt-4 max-w-xl mx-auto">
-          Discover the wide range of innovative and cutting-edge services we
-          offer to help your business succeed.
+          At Marvel Studies, we offer a range of supercharged services designed
+          to unleash your academic powers and help you conquer the world of
+          education.
         </p>
       </div>
 

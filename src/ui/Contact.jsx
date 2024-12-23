@@ -25,7 +25,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="bg-[#FAF9F6] min-h-screen flex items-center justify-center px-4 font-marvel"
+      className="bg-white min-h-screen flex items-center justify-center px-4 "
     >
       <motion.div
         className="bg-white rounded-lg shadow-lg p-8 w-full my-10 md:mt-0 "
@@ -45,7 +45,7 @@ const Contact = () => {
               href="mailto:uifresh.net@gmail.com"
               className="text-[#30315f] font-medium ml-1 underline"
             >
-              uifresh.net@gmail.com
+              info@marvelstudies.com
             </a>
           </p>
         </motion.div>
@@ -60,7 +60,7 @@ const Contact = () => {
             <motion.div className="md:w-3/4 w-full " variants={itemVariants}>
               <label
                 htmlFor="email"
-                className="block  font-extrabold text-gray-700 text-xl "
+                className="block  font-extrabold text-gray-700 text-md "
               >
                 Email address
               </label>
@@ -79,7 +79,7 @@ const Contact = () => {
             <motion.div className="md:w-3/4 w-full" variants={itemVariants}>
               <label
                 htmlFor="name"
-                className="block  font-extrabold text-gray-700 text-xl "
+                className="block  font-extrabold text-gray-700 text-md "
               >
                 Your name
               </label>
@@ -95,7 +95,7 @@ const Contact = () => {
             <motion.div className="md:w-3/4 w-full" variants={itemVariants}>
               <label
                 htmlFor="message"
-                className="block  font-extrabold text-gray-700 text-xl "
+                className="block  font-extrabold text-gray-700 text-md "
               >
                 Your message
               </label>
