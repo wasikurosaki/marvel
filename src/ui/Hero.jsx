@@ -90,13 +90,17 @@ const Hero = () => {
     <div className="flex flex-col justify-center items-center md:h-[125vh] h-[125vh] bg-white">
       {/* Hero Image */}
       <img
-        className="w-full h-auto mt-8 md:w-[820px] md:mt-[-150px]"
+        className="w-full h-auto mt-8 md:w-[820px] md:mt-[-150px] z-50"
         src={heroImage}
         alt="Hero"
       />
+      <div className="absolute inset-0 flex justify-center items-center">
+        <div className="absolute rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-30 blur-3xl w-72 h-72 md:w-[300px] md:h-[300px] left-1/4 top-10"></div>
+        <div className="absolute rounded-full bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 opacity-30 blur-3xl w-72 h-72 md:w-[300px] md:h-[300px] right-1/4 top-16"></div>
+      </div>
 
       {/* Slider and Header Section */}
-      <div className="flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-10 py-2 bg-[#e9eaf7]">
+      <div className="flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-10 py-2 bg-[#e9eaf7] z-50">
         {/* Left Section */}
         <div className="flex flex-col gap-4 md:w-1/3 text-left md:ml-32 ml-0">
           <h1 className="text-2xl md:text-3xl font-bold text-[#30315f]">
