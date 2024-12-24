@@ -16,7 +16,7 @@ const TextCloud = ({ texts = [] }) => {
   const radius = isMobile ? 100 : 180; // Smaller radius for mobile
   const size = 2.5 * radius; // Keep the size proportional
   const maxSpeedVal = isMobile ? 0.2 : 0.3; // Slower speed to decrease the speed of animation
-  const initSpeedVal = 1.5; // Initial speed remains the same
+  const initSpeedVal = 1; // Initial speed remains the same
   const direction = 135;
 
   useEffect(() => {

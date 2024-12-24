@@ -87,7 +87,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center md:h-[125vh] h-[125vh] bg-white">
+    <div className="flex flex-col justify-center items-center md:h-[140vh] h-[125vh] bg-white">
       {/* Hero Image */}
       <img
         className="w-full h-auto mt-8 md:w-[820px] md:mt-[-150px] z-10"
@@ -95,8 +95,8 @@ const Hero = () => {
         alt="Hero"
       />
       <div className="absolute inset-0 flex justify-center items-center">
-        <div className="absolute rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-30 blur-3xl w-72 h-72 md:w-[300px] md:h-[300px] left-1/4 top-10"></div>
-        <div className="absolute rounded-full bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 opacity-30 blur-3xl w-72 h-72 md:w-[300px] md:h-[300px] right-1/4 top-16"></div>
+        <div className="absolute rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-30 blur-3xl w-60 h-72 md:w-[300px] md:h-[300px] left-1/3 top-40 "></div>
+        <div className="absolute rounded-full bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 opacity-30 blur-3xl w-72 h-72 md:w-[300px] md:h-[300px] right-1/4 top-32 "></div>
       </div>
 
       {/* Slider and Header Section */}

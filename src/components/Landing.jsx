@@ -10,6 +10,7 @@ import FAQ from "../ui/FAQ";
 import Testmonials from "../ui/Testmonials";
 import Contact from "../ui/Contact";
 import Footer from "../ui/Footer";
+import Teams from "../ui/Teams";
 
 const Landing = () => {
   return (
@@ -23,7 +24,7 @@ const Landing = () => {
       <Destination />
       <Testmonials />
       <FAQ />
-
+      <Teams />
       <Contact />
       <Footer />
     </div>
