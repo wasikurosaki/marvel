@@ -74,9 +74,6 @@ const services = [
   // },
 ];
 
-heroImage =
-  "https://res.cloudinary.com/dedntczjt/image/upload/v1735042513/Text_on_plane_on_l4bptt.png";
-
 const Hero = () => {
   const sliderSettings = {
     dots: false,
