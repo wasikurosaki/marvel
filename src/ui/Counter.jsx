@@ -6,22 +6,22 @@ const Counter = () => {
   const stats = [
     {
       icon: <GraduationCap size={32} className="text-white" />,
-      count: 300,
+      count: 77,
       label: "SUCCESS STORIES",
     },
     {
       icon: <Users size={32} className="text-white" />,
-      count: 520,
+      count: 123,
       label: "TRUSTED STUDNETS",
     },
     {
       icon: <Calendar size={32} className="text-white" />,
-      count: 1000,
+      count: 227,
       label: "SCHEDULES",
     },
     {
       icon: <BookOpen size={32} className="text-white" />,
-      count: 20,
+      count: 7,
       label: "COUNTRIES",
     },
   ];

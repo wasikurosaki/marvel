@@ -71,7 +71,7 @@ const Header = () => {
             </button>
           </a>
           <a
-            href="https://www.facebook.com/profile.php?id=61570623544992"
+            href="https://www.linkedin.com/company/marvel-studies"
             target="_blank"
             rel="noreferrer"
           >
@@ -142,18 +142,20 @@ const Header = () => {
 
         {/* Social Links */}
         <div className="mt-6 border-t border-gray-200 pt-4 flex justify-center space-x-6 mb-2">
-          <button>
-            <FaFacebook size={28} color="#30315f" />
-          </button>
-          <button>
-            <FaTwitter size={28} color="#30315f" />
-          </button>
-          <button>
-            <FaInstagram size={28} color="#30315f" />
-          </button>
-          <button>
-            <FaLinkedin size={28} color="#30315f" />
-          </button>
+          <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
+            <button>
+              <FaFacebook size={28} color="#30315f" />
+            </button>
+          </a>
+          <a
+            href="https://www.linkedin.com/company/marvel-studies"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button>
+              <FaLinkedin size={28} color="#30315f" />
+            </button>
+          </a>
         </div>
       </div>
     </header>

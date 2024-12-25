@@ -20,7 +20,7 @@ const Landing = () => {
       <Hero />
       <About />
       {/* <WhyMarvel /> */}
-      <Counter />
+      {/* <Counter /> */}
       <Partners />
       <Services />
       <Destination />

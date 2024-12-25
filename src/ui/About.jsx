@@ -113,7 +113,7 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: card.delay, duration: 0.6 }}
             >
-              <h3 className="md:text-2xl text-xl font-extrabold text-[#30315f] mb-4 md:text-start text-center">
+              <h3 className="md:text-xl text-lg font-extrabold text-[#30315f] mb-4  text-center">
                 {card.title}
               </h3>
               <p className="text-gray-600 text-justify">{card.content}</p>

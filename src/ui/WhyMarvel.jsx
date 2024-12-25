@@ -50,7 +50,7 @@ const WhyChooseMarvel = () => {
             onClick={() => toggleCard(index)}
             whileHover={{ scale: 1.05 }}
           >
-            <h3 className="text-2xl font-extrabold text-[#30315f] mb-4">
+            <h3 className="text-lg font-extrabold text-[#30315f] mb-4 text-center">
               {card.title}
             </h3>
             <motion.div

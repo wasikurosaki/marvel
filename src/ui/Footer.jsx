@@ -22,6 +22,10 @@ const Footer = () => {
             Flat 4A, House 44, Block D<br /> Road 8, Niketon, Gulshan 1, Dhaka
             -1212
           </p>
+          <br />
+          <p className="text-white text-xl">
+            Pancras Road, London N1C 4AG, London, United Kingdom.
+          </p>
         </div>
 
         {/* Social Media Section */}
@@ -29,31 +33,16 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-2 text-center">Follow Us</h3>
           <div className="flex gap-4">
             <a
-              href="#"
+              href="https://www.facebook.com/profile.php?id=61570623544992"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-blue-500 transition duration-300"
             >
               <FaFacebook size={28} />
             </a>
+
             <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-blue-400 transition duration-300"
-            >
-              <FaTwitter size={28} />
-            </a>
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-pink-500 transition duration-300"
-            >
-              <FaInstagram size={28} />
-            </a>
-            <a
-              href="#"
+              href="https://www.linkedin.com/company/marvel-studies"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-blue-700 transition duration-300"

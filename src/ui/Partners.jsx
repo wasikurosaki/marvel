@@ -140,7 +140,7 @@ const Partners = () => {
         {/* Title */}
         <div className="text-center mb-20">
           <h1 className="md:text-5xl text-3xl  font-extrabold text-[#30315f]">
-            Our Partned Universities
+            Our Partnered Universities
           </h1>
         </div>
 
