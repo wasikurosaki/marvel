@@ -2,12 +2,39 @@ import React from "react";
 import { motion } from "framer-motion";
 import Logo from "../assets/Marvel Studies Final PNG-01.png"; // Adjust path if needed
 
+const cardData = [
+  {
+    title: "Superpowered Expertise",
+    content:
+      "Our team brings together deep industry knowledge and an unyielding passion for student success. We ensure your ambitions align with the best-fit universities and programs.",
+    delay: 0.2,
+  },
+  {
+    title: "Youth-Centric Approach",
+    content:
+      "As champions of Gen Z, we understand your aspirations and struggles. Marvel Studies is your bridge to global opportunities, empowering you to write your own success story.",
+    delay: 0.4,
+  },
+  {
+    title: "Unwavering Support",
+    content:
+      "From counseling and document preparation to interview training and visa processing, we’re with you every step of the way to ensure your success.",
+    delay: 0.6,
+  },
+  {
+    title: "Celebrating Success",
+    content:
+      "Every acceptance letter is a victory for us, too. We go beyond limits to redefine what's possible for students like you, marking each success story as our own.",
+    delay: 0.8,
+  },
+];
+
 const About = () => {
   return (
     <>
       {/* Existing About Us Section */}
-      <div className="md:mt-[-20rem] mt-0 h-auto md:mb-0 ">
-        <div className="text-center " id="about">
+      <div className="md:mt-[-4rem] mt-0 h-auto md:mb-0">
+        <div className="text-center" id="about">
           <h1 className="text-4xl md:text-5xl font-extrabold text-[#30315f] font-mono md:mb-0 mb-6">
             About Us
           </h1>
@@ -72,79 +99,26 @@ const About = () => {
       {/* New Section with Cards */}
       <div className="py-12 bg-white">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-extrabold text-[#30315f]">
+          <h2 className="md:text-4xl text-2xl font-extrabold text-[#30315f]">
             Why Choose Marvel Studies?
           </h2>
         </div>
 
-        <div className=" grid grid-cols-4 justify-center gap-8 px-6 md:px-12">
-          {/* Card 1: Superpowered Expertise */}
-          <motion.div
-            className="bg-white p-6 rounded-lg  w-full md:w-[20rem] pl-10"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-          >
-            <h3 className="text-2xl font-extrabold text-[#30315f] mb-4">
-              Superpowered Expertise
-            </h3>
-            <p className="text-gray-600 text-justify">
-              Our team brings together deep industry knowledge and an unyielding
-              passion for student success. We ensure your ambitions align with
-              the best-fit universities and programs.
-            </p>
-          </motion.div>
-
-          {/* Card 2: Youth-Centric Approach */}
-          <motion.div
-            className="bg-white p-6 rounded-lg  w-full   md:w-[20rem]"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-          >
-            <h3 className="text-2xl font-extrabold text-[#30315f] mb-4">
-              Youth-Centric Approach
-            </h3>
-            <p className="text-gray-600 text-justify">
-              As champions of Gen Z, we understand your aspirations and
-              struggles. Marvel Studies is your bridge to global opportunities,
-              empowering you to write your own success story.
-            </p>
-          </motion.div>
-
-          {/* Card 3: Unwavering Support */}
-          <motion.div
-            className="bg-white p-6 rounded-lg  w-full md:w-[20rem]"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-          >
-            <h3 className="text-2xl font-extrabold text-[#30315f] mb-4">
-              Unwavering Support
-            </h3>
-            <p className="text-gray-600 text-justify">
-              From counseling and document preparation to interview training and
-              visa processing, we’re with you every step of the way to ensure
-              your success.
-            </p>
-          </motion.div>
-
-          {/* Card 4: Celebrating Success */}
-          <motion.div
-            className="bg-white p-6 rounded-lg   w-full md:w-[20rem]"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.6 }}
-          >
-            <h3 className="text-2xl font-extrabold text-[#30315f] mb-4">
-              Celebrating Success
-            </h3>
-            <p className="text-gray-600 text-justify">
-              Every acceptance letter is a victory for us, too. We go beyond
-              limits to redefine what's possible for students like you, marking
-              each success story as our own.
-            </p>
-          </motion.div>
+        <div className="grid md:grid-cols-4 grid-cols-1 justify-center gap-8 px-6 md:px-12">
+          {cardData.map((card, index) => (
+            <motion.div
+              key={index}
+              className="bg-white p-6 rounded-lg w-full md:w-[20rem]"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: card.delay, duration: 0.6 }}
+            >
+              <h3 className="md:text-2xl text-xl font-extrabold text-[#30315f] mb-4 md:text-start text-center">
+                {card.title}
+              </h3>
+              <p className="text-gray-600 text-justify">{card.content}</p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </>

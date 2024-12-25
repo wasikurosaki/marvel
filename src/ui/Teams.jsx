@@ -47,7 +47,7 @@ const Teams = () => {
       <h2 className="text-center md:text-5xl text-3xl font-extrabold text-[#30315f]">
         Our Collective Superheros
       </h2>
-      <div className="flex md:flex-row flex-col gap-6 items-center justify-center my-[25vh]">
+      <div className="flex md:flex-row flex-col gap-6 items-center justify-center my-[20vh]">
         {teamMembers.map((member, index) => (
           <motion.div
             key={index}
