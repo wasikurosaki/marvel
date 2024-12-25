@@ -65,18 +65,20 @@ const Header = () => {
 
         {/* Socials for Larger Screens */}
         <div className="hidden md:flex space-x-4">
-          <button>
-            <FaFacebook size={28} color="#30315f" />
-          </button>
-          <button>
-            <FaTwitter size={28} color="#30315f" />
-          </button>
-          <button>
-            <FaInstagram size={28} color="#30315f" />
-          </button>
-          <button>
-            <FaLinkedin size={28} color="#30315f" />
-          </button>
+          <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
+            <button>
+              <FaFacebook size={28} color="#30315f" />
+            </button>
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=61570623544992"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button>
+              <FaLinkedin size={28} color="#30315f" />
+            </button>
+          </a>
         </div>
       </div>
 
