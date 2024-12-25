@@ -151,7 +151,7 @@ const Partners = () => {
             <button
               key={university.id}
               onClick={() => handleCountryChange(university.id)}
-              className="md:px-6 px-2 py-0 md:py-2 bg-[#30315f] text-white rounded-full md:text-lg text- font-semibold hover:bg-[#505f88] transition duration-300"
+              className="flex items-center px-4 justify-center  md:w-44 md:h-12 bg-[#30315f] text-white rounded-full text-lg font-semibold hover:bg-[#505f88] transition duration-300"
             >
               {university.country}
             </button>
