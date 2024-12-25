@@ -22,28 +22,25 @@ const universities = [
     id: 2,
     country: "UK",
     logos: [
-      california,
-      country,
-      california,
-      country,
-      california,
-      country,
-      california,
-      country,
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124307/UoG-removebg-preview_1.png",
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124306/University_of_Hertfordshire-removebg-preview.png",
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124305/LSBU-removebg-preview.png",
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124305/Ulster-University-Logo-Pngsource-RDE8GY99-removebg-preview.png",
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124305/StudyGroup-logo-removebg-preview.png",
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124304/De_Mont_Fort-removebg-preview.png",
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124304/Middlesex_University-removebg-preview.png",
     ],
   },
   {
     id: 3,
     country: "Australia",
     logos: [
-      country,
-      california,
-      country,
-      country,
-      california,
-      country,
-      country,
-      california,
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124422/Western_Sybney_Uni-removebg-preview.png",
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124420/Swinburn_Uni-removebg-preview.png",
+      // "https://res.cloudinary.com/dedntczjt/image/upload/v1735124417/Murdoch_University_extended_logo-removebg-preview.png",
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124416/La_Trobe-removebg-preview.png",
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124415/Deakin_University-removebg-preview.png",
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124414/CQ_Uni-removebg-preview.png",
     ],
   },
   {
@@ -170,7 +167,7 @@ const Partners = () => {
                 <img
                   src={logo}
                   alt={`University ${index + 1}`}
-                  className="md:w-[350px] md:h-[350px] object-contain"
+                  className="md:w-[200px] md:h-[200px] object-contain w-[150px] h-auto"
                 />
               </div>
             ))}
