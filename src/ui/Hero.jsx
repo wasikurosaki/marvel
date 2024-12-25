@@ -87,7 +87,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center md:h-[120vh] h-[118vh] bg-white">
+    <div className="flex flex-col justify-center items-center md:h-[120vh] h-[118vh] bg-white md:mt-0">
       {/* Hero Image */}
       <img
         className="w-full h-auto mt-8 md:w-[1100px] md:mt-[-170px] z-10"

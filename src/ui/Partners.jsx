@@ -5,14 +5,6 @@ import california from "../assets/california.png";
 
 const universities = [
   {
-    id: 1,
-    country: "USA",
-    logos: [
-      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124324/Monroe_Uni-removebg-preview.png",
-      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124323/BA_Uni-removebg-preview.png",
-    ],
-  },
-  {
     id: 2,
     country: "UK",
     logos: [
@@ -63,6 +55,14 @@ const universities = [
       "https://res.cloudinary.com/dedntczjt/image/upload/v1735124348/University_of_Otago-removebg-preview.png",
       "https://res.cloudinary.com/dedntczjt/image/upload/v1735124348/png-transparent-the-university-of-auckland-hd-logo-thumbnail-removebg-preview.png",
       "https://res.cloudinary.com/dedntczjt/image/upload/v1735124347/Lincoln_University-01-removebg-preview.png",
+    ],
+  },
+  {
+    id: 1,
+    country: "USA",
+    logos: [
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124324/Monroe_Uni-removebg-preview.png",
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124323/BA_Uni-removebg-preview.png",
     ],
   },
 ];

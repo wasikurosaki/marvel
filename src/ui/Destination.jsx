@@ -135,15 +135,17 @@ const TextCloud = ({ texts = [] }) => {
 
   const countries = [
     "USA",
-    "Canada",
-    "Brazil",
-    "India",
+    "UK",
+    "Denmark",
+    "Malaysia",
+    "New Zealand",
     "Australia",
-    "Japan",
-    "Germany",
-    "South Korea",
-    "China",
-    "France",
+    "USA",
+    "UK",
+    "Denmark",
+    "Malaysia",
+    "New Zealand",
+    "Australia",
   ];
 
   return (
