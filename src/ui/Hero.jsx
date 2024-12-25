@@ -91,7 +91,7 @@ const Hero = () => {
       {/* Hero Image */}
       <img
         className="w-full h-auto mt-8 md:w-[1100px] md:mt-[-170px] z-10"
-        src="https://res.cloudinary.com/dedntczjt/image/upload/v1735128990/No_box_vqso8y.png"
+        src="https://res.cloudinary.com/dedntczjt/image/upload/t_2xred/v1735128990/No_box_vqso8y.png"
         alt="Hero"
       />
       <div className="absolute inset-0 flex justify-center items-center">

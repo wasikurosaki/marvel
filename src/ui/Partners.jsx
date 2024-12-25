@@ -8,14 +8,8 @@ const universities = [
     id: 1,
     country: "USA",
     logos: [
-      country,
-      country,
-      california,
-      country,
-      california,
-      country,
-      california,
-      country,
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124324/Monroe_Uni-removebg-preview.png",
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124323/BA_Uni-removebg-preview.png",
     ],
   },
   {
@@ -38,6 +32,7 @@ const universities = [
       "https://res.cloudinary.com/dedntczjt/image/upload/v1735124422/Western_Sybney_Uni-removebg-preview.png",
       "https://res.cloudinary.com/dedntczjt/image/upload/v1735124420/Swinburn_Uni-removebg-preview.png",
       "https://res.cloudinary.com/dedntczjt/image/upload/v1735124416/La_Trobe-removebg-preview.png",
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124417/Murdoch_University_extended_logo-removebg-preview.png",
       "https://res.cloudinary.com/dedntczjt/image/upload/v1735124415/Deakin_University-removebg-preview.png",
       "https://res.cloudinary.com/dedntczjt/image/upload/v1735124414/CQ_Uni-removebg-preview.png",
     ],
@@ -46,48 +41,34 @@ const universities = [
     id: 4,
     country: "Denmark",
     logos: [
-      country,
-      country,
-      california,
-      country,
-      california,
-      country,
-      california,
-      country,
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124396/university-of-copenhagen--ku--29-logo-removebg-preview.png",
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124395/ruc_logo_download_dk-removebg-preview.png",
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124394/Aarhus_University_logo.svg-removebg-preview.png",
     ],
   },
   {
     id: 5,
     country: "Malaysia",
     logos: [
-      country,
-      country,
-      california,
-      country,
-      california,
-      country,
-      california,
-      country,
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124367/png-clipart-university-of-malaya-doel-logo-brand-university-of-malaya-doel-thumbnail-removebg-preview.png",
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124367/USM-removebg-preview.png",
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124367/AsiaPacificUniversityOfTechnologyInnovation.svg-removebg-preview.png",
     ],
   },
   {
     id: 6,
     country: "NEW ZEALAND",
     logos: [
-      country,
-      country,
-      california,
-      country,
-      california,
-      country,
-      california,
-      country,
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124349/university_of_Waikato-removebg-preview.png",
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124348/University_of_Otago-removebg-preview.png",
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124348/png-transparent-the-university-of-auckland-hd-logo-thumbnail-removebg-preview.png",
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735124347/Lincoln_University-01-removebg-preview.png",
     ],
   },
 ];
 
 const Partners = () => {
-  const [selectedCountry, setSelectedCountry] = useState(universities[0].id);
+  const [selectedCountry, setSelectedCountry] = useState(universities[2].id);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   const selectedUniversity = universities.find(
@@ -161,7 +142,7 @@ const Partners = () => {
             {selectedUniversity.logos.map((logo, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center h-48"
+                className="flex items-center justify-center h-48 overflow-hidden"
               >
                 <div className="w-40 h-40 flex items-center justify-center mx-auto">
                   <img

@@ -33,7 +33,7 @@ const About = () => {
   return (
     <>
       {/* Existing About Us Section */}
-      <div className="md:mt-[-4rem] mt-0 h-auto md:mb-0">
+      <div className="md:mt-[-4rem] mt-[-5rem] h-auto md:mb-0">
         <div className="text-center" id="about">
           <h1 className="text-4xl md:text-5xl font-extrabold text-[#30315f] font-mono md:mb-0 mb-6">
             About Us

@@ -68,7 +68,7 @@ const Services = () => {
   });
 
   return (
-    <div id="services" className="bg-gray-50 py-16">
+    <div id="services" className="bg-white py-16">
       {/* Section Title */}
       <div className="text-center mb-16">
         <h1 className="text-3xl md:text-5xl font-extrabold text-[#30315f] ">
@@ -89,7 +89,7 @@ const Services = () => {
         {servicesData.map((service, index) => (
           <motion.div
             key={index}
-            className="flex flex-col items-center text-center bg-gray-50 rounded-lg p-8 hover:shadow-2xl hover:scale-105 transition-all duration-300"
+            className="flex flex-col items-center text-center bg-white rounded-lg p-8 hover:shadow-2xl hover:scale-105 transition-all duration-300"
             // initial={{ opacity: 0, y: 30 }}
             // animate={{
             //   opacity: inView ? 1 : 0,
