@@ -46,7 +46,7 @@ const Teams = () => {
   return (
     <div className="bg-white h-auto md:h-[100vh] px-8 mt-20 ">
       <h2 className="text-center md:text-5xl text-3xl font-extrabold text-[#30315f]">
-        Our Collective Superheros
+        Our Collective Superheroes
       </h2>
       <div className="flex md:flex-row flex-col gap-6 items-center justify-center my-[25vh]">
         {teamMembers.map((member, index) => (
