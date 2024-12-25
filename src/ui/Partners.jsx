@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
 import country from "../assets/adelaide.png";
-import california from "../assets/california.png"; // This will be used dynamically per country
+import california from "../assets/california.png";
 
 const universities = [
   {
@@ -37,14 +37,13 @@ const universities = [
     logos: [
       "https://res.cloudinary.com/dedntczjt/image/upload/v1735124422/Western_Sybney_Uni-removebg-preview.png",
       "https://res.cloudinary.com/dedntczjt/image/upload/v1735124420/Swinburn_Uni-removebg-preview.png",
-      // "https://res.cloudinary.com/dedntczjt/image/upload/v1735124417/Murdoch_University_extended_logo-removebg-preview.png",
       "https://res.cloudinary.com/dedntczjt/image/upload/v1735124416/La_Trobe-removebg-preview.png",
       "https://res.cloudinary.com/dedntczjt/image/upload/v1735124415/Deakin_University-removebg-preview.png",
       "https://res.cloudinary.com/dedntczjt/image/upload/v1735124414/CQ_Uni-removebg-preview.png",
     ],
   },
   {
-    id: 1,
+    id: 4,
     country: "Denmark",
     logos: [
       country,
@@ -58,7 +57,7 @@ const universities = [
     ],
   },
   {
-    id: 1,
+    id: 5,
     country: "Malaysia",
     logos: [
       country,
@@ -72,7 +71,7 @@ const universities = [
     ],
   },
   {
-    id: 1,
+    id: 6,
     country: "NEW ZEALAND",
     logos: [
       country,
@@ -89,40 +88,41 @@ const universities = [
 
 const Partners = () => {
   const [selectedCountry, setSelectedCountry] = useState(universities[0].id);
-  const [isTransitioning, setIsTransitioning] = useState(false); // Track the transition state
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
   const selectedUniversity = universities.find(
     (university) => university.id === selectedCountry
   );
 
   const handleCountryChange = (id) => {
-    setIsTransitioning(true); // Start the transition
+    setIsTransitioning(true);
     setTimeout(() => {
-      setSelectedCountry(id); // Change country after delay
-      setIsTransitioning(false); // End transition
-    }, 500); // Set the transition delay (500ms)
+      setSelectedCountry(id);
+      setIsTransitioning(false);
+    }, 500);
   };
 
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 5, // Default for larger screens
+    slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    centerMode: true, // Optional: Centers the active logo
-    focusOnSelect: true, // Optional: Makes the selected logo focusable
+    centerMode: true,
+    focusOnSelect: true,
     responsive: [
       {
-        breakpoint: 1024, // Tablets and up
+        breakpoint: 1024,
         settings: {
-          slidesToShow: 3, // Show 3 logos on medium screens
+          slidesToShow: 3,
         },
       },
       {
-        breakpoint: 768, // Mobile screens
+        breakpoint: 768,
         settings: {
-          slidesToShow: 1, // Show 1 logo on small screens
+          slidesToShow: 1,
         },
       },
     ],
@@ -134,28 +134,24 @@ const Partners = () => {
       className="w-full py-16 bg-[#FAF9F6] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4">
-        {/* Title */}
         <div className="text-center mb-20">
-          <h1 className="md:text-5xl text-3xl  font-extrabold text-[#30315f]">
+          <h1 className="md:text-5xl text-3xl font-extrabold text-[#30315f]">
             Our Partnered Universities
           </h1>
         </div>
 
-        {/* Country slider Buttons */}
-
         <div className="flex flex-wrap justify-center gap-8 mb-16">
-          {universities.map((university, index) => (
+          {universities.map((university) => (
             <button
               key={university.id}
               onClick={() => handleCountryChange(university.id)}
-              className="flex items-center px-4 justify-center  md:w-44 md:h-12 bg-[#30315f] text-white rounded-full text-lg font-semibold hover:bg-[#505f88] transition duration-300"
+              className="flex items-center px-4 justify-center md:w-44 md:h-12 bg-[#30315f] text-white rounded-full text-lg font-semibold hover:bg-[#505f88] transition duration-300"
             >
               {university.country}
             </button>
           ))}
         </div>
 
-        {/* University Logos Carousel */}
         <div
           className={`transition-opacity duration-500 ${
             isTransitioning ? "opacity-0" : "opacity-100"
@@ -163,12 +159,17 @@ const Partners = () => {
         >
           <Slider {...settings}>
             {selectedUniversity.logos.map((logo, index) => (
-              <div key={index} className="flex items-center justify-center">
-                <img
-                  src={logo}
-                  alt={`University ${index + 1}`}
-                  className="md:w-[200px] md:h-[200px] object-contain w-[150px] h-auto"
-                />
+              <div
+                key={index}
+                className="flex items-center justify-center h-48"
+              >
+                <div className="w-40 h-40 flex items-center justify-center mx-auto">
+                  <img
+                    src={logo}
+                    alt={`University ${index + 1}`}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
               </div>
             ))}
           </Slider>
