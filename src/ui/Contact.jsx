@@ -25,7 +25,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="bg-white min-h-screen flex items-center justify-center px-4 my-[-10rem] "
+      className="bg-white min-h-screen flex items-center justify-center px-4 md:my-4 mb-10"
     >
       <motion.div
         className="bg-white rounded-lg  p-8 w-full mb-10 md:mt-0 "

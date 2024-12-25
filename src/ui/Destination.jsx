@@ -203,7 +203,7 @@ const Destination = () => {
         </div>
 
         {/* Text Cloud Section */}
-        <div className="rounded-xl p-8  mt-[18rem]">
+        <div className="rounded-xl p-8  md:mt-[18rem] mt-[14rem]">
           <div className="flex flex-col items-center justify-center">
             <div className="relative md:w-full w-3/4 md:h-full h-3/4">
               <TextCloud texts={texts} />

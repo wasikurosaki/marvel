@@ -53,7 +53,7 @@ const Testimonials = () => {
       <div className="md:h-0 h-22 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900"></div>
 
       {/* Testimonials Section */}
-      <div className="absolute md:top-[-100px] top-20 left-0 right-0 mx-auto bg-white shadow-lg  md:max-w-[80rem] max-w-[22rem] p-8 z-10">
+      <div className="absolute md:top-[-100px] top-[-80px] left-0 right-0 mx-auto bg-white shadow-lg  md:max-w-[80rem] max-w-[22rem] p-8 z-10">
         <div className="text-center">
           <h3 className="text-lg font-medium text-gray-600 mb-2">
             Testimonials

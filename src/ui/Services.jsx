@@ -82,11 +82,11 @@ const Services = () => {
           <motion.div
             key={index}
             className="flex flex-col items-center text-center bg-gray-50 rounded-lg p-8 hover:shadow-2xl hover:scale-105 transition-all duration-300"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{
-              opacity: inView ? 1 : 0,
-              y: inView ? 0 : 30,
-            }}
+            // initial={{ opacity: 0, y: 30 }}
+            // animate={{
+            //   opacity: inView ? 1 : 0,
+            //   y: inView ? 0 : 30,
+            // }}
             transition={{ duration: 0.8, delay: index * 0.2 }}
           >
             {/* Icon */}
