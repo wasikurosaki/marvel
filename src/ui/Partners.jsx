@@ -68,7 +68,7 @@ const universities = [
 ];
 
 const Partners = () => {
-  const [selectedCountry, setSelectedCountry] = useState(universities[2].id);
+  const [selectedCountry, setSelectedCountry] = useState(universities[0].id);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   const selectedUniversity = universities.find(

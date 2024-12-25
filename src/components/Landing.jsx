@@ -12,11 +12,13 @@ import Contact from "../ui/Contact";
 import Footer from "../ui/Footer";
 import Teams from "../ui/Teams";
 import WhyMarvel from "../ui/WhyMarvel";
+import FacebookButton from "../ui/FacebooButton";
 
 const Landing = () => {
   return (
     <div>
       <Header />
+      <FacebookButton />
       <Hero />
       <About />
       {/* <WhyMarvel /> */}

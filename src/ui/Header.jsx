@@ -42,7 +42,7 @@ const Header = () => {
         {/* Pages Section for Larger Screens */}
         <div className="hidden md:flex space-x-6  text-black text-xl">
           <button className="hover:text-[#ce4a81]">
-            <a href="#home">Home</a>
+            <a href="#hero">Home</a>
           </button>
           <button className="hover:text-[#ce4a81]">
             {" "}
@@ -65,7 +65,11 @@ const Header = () => {
 
         {/* Socials for Larger Screens */}
         <div className="hidden md:flex space-x-4">
-          <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.facebook.com/profile.php?id=61570623544992"
+            target="_blank"
+            rel="noreferrer"
+          >
             <button>
               <FaFacebook size={28} color="#30315f" />
             </button>
@@ -90,7 +94,7 @@ const Header = () => {
       >
         {/* Navigation Links */}
         <div className="flex flex-col items-center space-y-4 p-6">
-          <a className="w-full" href="#home">
+          <a className="w-full" href="#hero">
             <button
               onClick={toggleMenu}
               className="w-full text-center px-4 py-2 text-gray-700 font-' text-lg rounded-md hover:bg-gradient-to-r from-[#90427f] to-[#ce4a81] hover:text-white transition-all duration-200"
@@ -142,7 +146,11 @@ const Header = () => {
 
         {/* Social Links */}
         <div className="mt-6 border-t border-gray-200 pt-4 flex justify-center space-x-6 mb-2">
-          <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.facebook.com/profile.php?id=61570623544992"
+            target="_blank"
+            rel="noreferrer"
+          >
             <button>
               <FaFacebook size={28} color="#30315f" />
             </button>
