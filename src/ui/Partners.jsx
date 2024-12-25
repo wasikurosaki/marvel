@@ -46,7 +46,48 @@ const universities = [
       california,
     ],
   },
-  // Add other countries here in similar structure
+  {
+    id: 1,
+    country: "Denmark",
+    logos: [
+      country,
+      country,
+      california,
+      country,
+      california,
+      country,
+      california,
+      country,
+    ],
+  },
+  {
+    id: 1,
+    country: "Malaysia",
+    logos: [
+      country,
+      country,
+      california,
+      country,
+      california,
+      country,
+      california,
+      country,
+    ],
+  },
+  {
+    id: 1,
+    country: "NEW ZEALAND",
+    logos: [
+      country,
+      country,
+      california,
+      country,
+      california,
+      country,
+      california,
+      country,
+    ],
+  },
 ];
 
 const Partners = () => {
@@ -99,17 +140,18 @@ const Partners = () => {
         {/* Title */}
         <div className="text-center mb-20">
           <h1 className="md:text-5xl text-3xl  font-extrabold text-[#30315f]">
-            Our Partned Univiersities
+            Our Partned Universities
           </h1>
         </div>
 
-        {/* Country Buttons */}
-        <div className="flex justify-center gap-8 mb-16">
-          {universities.map((university) => (
+        {/* Country slider Buttons */}
+
+        <div className="flex flex-wrap justify-center gap-8 mb-16">
+          {universities.map((university, index) => (
             <button
               key={university.id}
               onClick={() => handleCountryChange(university.id)}
-              className="md:px-6 px-4 py-2 md:py-2 bg-[#30315f] text-white rounded-full md:text-lg text-md font-semibold hover:bg-[#505f88] transition duration-300"
+              className="md:px-6 px-2 py-0 md:py-2 bg-[#30315f] text-white rounded-full md:text-lg text- font-semibold hover:bg-[#505f88] transition duration-300"
             >
               {university.country}
             </button>
@@ -128,7 +170,7 @@ const Partners = () => {
                 <img
                   src={logo}
                   alt={`University ${index + 1}`}
-                  className="md:w-[350px] md:h-[350px] object-contain" // Larger logos
+                  className="md:w-[350px] md:h-[350px] object-contain"
                 />
               </div>
             ))}

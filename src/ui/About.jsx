@@ -5,7 +5,8 @@ import Logo from "../assets/Marvel Studies Final PNG-01.png"; // Adjust path if 
 const About = () => {
   return (
     <>
-      <div className="md:mt-[-7rem] mt-0 h-auto md:mb-0 ">
+      {/* Existing About Us Section */}
+      <div className="md:mt-[-20rem] mt-0 h-auto md:mb-0 ">
         <div className="text-center " id="about">
           <h1 className="text-4xl md:text-5xl font-extrabold text-[#30315f] font-mono md:mb-0 mb-6">
             About Us
@@ -64,6 +65,85 @@ const About = () => {
               alt="Marvel Logo"
               className="h-auto md:w-[20rem] w-[15rem] object-contain md:mb-0 mb-10"
             />
+          </motion.div>
+        </div>
+      </div>
+
+      {/* New Section with Cards */}
+      <div className="py-12 bg-white">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-extrabold text-[#30315f]">
+            Why Choose Marvel Studies?
+          </h2>
+        </div>
+
+        <div className=" grid grid-cols-4 justify-center gap-8 px-6 md:px-12">
+          {/* Card 1: Superpowered Expertise */}
+          <motion.div
+            className="bg-white p-6 rounded-lg  w-full md:w-[20rem] pl-10"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+          >
+            <h3 className="text-2xl font-extrabold text-[#30315f] mb-4">
+              Superpowered Expertise
+            </h3>
+            <p className="text-gray-600 text-justify">
+              Our team brings together deep industry knowledge and an unyielding
+              passion for student success. We ensure your ambitions align with
+              the best-fit universities and programs.
+            </p>
+          </motion.div>
+
+          {/* Card 2: Youth-Centric Approach */}
+          <motion.div
+            className="bg-white p-6 rounded-lg  w-full   md:w-[20rem]"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+          >
+            <h3 className="text-2xl font-extrabold text-[#30315f] mb-4">
+              Youth-Centric Approach
+            </h3>
+            <p className="text-gray-600 text-justify">
+              As champions of Gen Z, we understand your aspirations and
+              struggles. Marvel Studies is your bridge to global opportunities,
+              empowering you to write your own success story.
+            </p>
+          </motion.div>
+
+          {/* Card 3: Unwavering Support */}
+          <motion.div
+            className="bg-white p-6 rounded-lg  w-full md:w-[20rem]"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.6 }}
+          >
+            <h3 className="text-2xl font-extrabold text-[#30315f] mb-4">
+              Unwavering Support
+            </h3>
+            <p className="text-gray-600 text-justify">
+              From counseling and document preparation to interview training and
+              visa processing, we’re with you every step of the way to ensure
+              your success.
+            </p>
+          </motion.div>
+
+          {/* Card 4: Celebrating Success */}
+          <motion.div
+            className="bg-white p-6 rounded-lg   w-full md:w-[20rem]"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.6 }}
+          >
+            <h3 className="text-2xl font-extrabold text-[#30315f] mb-4">
+              Celebrating Success
+            </h3>
+            <p className="text-gray-600 text-justify">
+              Every acceptance letter is a victory for us, too. We go beyond
+              limits to redefine what's possible for students like you, marking
+              each success story as our own.
+            </p>
           </motion.div>
         </div>
       </div>

@@ -87,69 +87,83 @@ const Hero = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center md:h-[140vh] h-[125vh] bg-white">
+    <div className="flex flex-col justify-center items-center md:h-[140vh] h-[100vh] bg-white">
       {/* Hero Image */}
       <img
-        className="w-full h-auto mt-8 md:w-[820px] md:mt-[-150px] z-10"
+        className="w-full h-auto mt-8 md:w-[1100px] md:mt-[-170px] z-10"
         src={heroImage}
         alt="Hero"
       />
       <div className="absolute inset-0 flex justify-center items-center">
-        <div className="absolute rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-30 blur-3xl w-60 h-72 md:w-[300px] md:h-[300px] left-1/3 top-40 "></div>
-        <div className="absolute rounded-full bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 opacity-30 blur-3xl w-72 h-72 md:w-[300px] md:h-[300px] right-1/4 top-32 "></div>
+        <div className="absolute rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-30 blur-3xl w-60 h-72 md:w-[300px] md:h-[300px] left-1/3 top-96 "></div>
+        <div className="absolute rounded-full bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 opacity-30 blur-3xl w-72 h-72 md:w-[300px] md:h-[300px] right-1/4 top-38 "></div>
       </div>
 
       {/* Slider and Header Section */}
-      <div className="flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-10 py-2 bg-[#e9eaf7] z-10">
+      <div className="flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-10  bg-[#e9eaf7] z-10 py-10">
         {/* Left Section */}
         <div className="flex flex-col gap-4 md:w-1/3 text-left md:ml-32 ml-0">
-          <h1 className="text-2xl md:text-3xl font-bold text-[#30315f]">
+          <h1 className="text-2xl md:text-3xl font-bold text-[#30315f] md:text-left text-center">
             We serve…Whatever it takes
           </h1>
-          <p className="text-sm md:text-md text-gray-600 md:text-left text-center">
+          <p className="text-lg md:text-md text-gray-600 md:text-left text-center">
             Welcome to Marvel Studies, where the power of dreams meets the
             determination to make them a reality!
           </p>
           <a href="#contact">
-            <button className="px-6 py-2 w-full md:w-[250px] bg-[#30315f] text-white rounded-full text-sm font-semibold hover:bg-[#505f88] transition duration-300 mt-6">
-              Book a consultation now!
+            <button className="px-6 py-4 w-full md:w-[250px] bg-[#30315f] text-white rounded-full text-sm font-semibold hover:bg-[#505f88] transition duration-300 mt-6 flex items-center justify-center gap-2">
+              Book a consultation now
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M5 12h14M12 5l7 7-7 7"
+                />
+              </svg>
             </button>
           </a>
         </div>
 
         {/* Right Section (Slider) */}
-        <div className="block md:w-[300px] w-[200px] mt-8 md:mt-0 md:mr-32 mr-0">
+        {/* <div className="block md:w-[300px] w-[200px] mt-8 md:mt-0 md:mr-32 mr-0">
           <Slider {...sliderSettings}>
             {services.map((service) => (
-              <motion.div
-                whileHover={{ y: -8 }} // Rise up on hover
-                transition={{ type: "spring", stiffness: 300 }}
-                key={service.id}
-                className={classNames(
-                  "flex flex-col items-center justify-center rounded-xl  my-8 h-[200px]",
-                  service.bgColor // Dynamic Tailwind class for background color
-                )}
-              >
-                <div className=" flex justify-center mb-4 mt-2">
-                  <a href="#services">
+              <a href="#services">
+                <motion.div
+                  whileHover={{ y: -8 }} // Rise up on hover
+                  transition={{ type: "spring", stiffness: 300 }}
+                  key={service.id}
+                  className={classNames(
+                    "flex flex-col items-center justify-center rounded-xl  my-8 h-[200px]",
+                    service.bgColor // Dynamic Tailwind class for background color
+                  )}
+                >
+                  <div className=" flex justify-center mb-4 mt-2">
                     <img
                       className="w-24 md:w-32 h-auto object-contain my-[-30px]"
                       src={service.icon}
                       alt={service.label}
                     />
-                  </a>
-                </div>
+                  </div>
 
-                <h1 className="text-lg md:text-xl font-semibold pb-2 text-center text-[#30315f] mt-10  ">
-                  {service.label}
-                </h1>
-                <p className="text-sm md:text-md text-gray-600 font-semibold px-4 pb-6 text-center">
-                  Learn More!
-                </p>
-              </motion.div>
+                  <h1 className="text-lg md:text-xl font-semibold pb-2 text-center text-[#30315f] mt-10  ">
+                    {service.label}
+                  </h1>
+                  <p className="text-sm md:text-md text-[30315f] font-semibold px-4 pb-6 text-center">
+                    Learn More!
+                  </p>
+                </motion.div>
+              </a>
             ))}
           </Slider>
-        </div>
+        </div> */}
       </div>
     </div>
   );

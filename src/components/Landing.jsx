@@ -11,6 +11,7 @@ import Testmonials from "../ui/Testmonials";
 import Contact from "../ui/Contact";
 import Footer from "../ui/Footer";
 import Teams from "../ui/Teams";
+import WhyMarvel from "../ui/WhyMarvel";
 
 const Landing = () => {
   return (
@@ -18,6 +19,7 @@ const Landing = () => {
       <Header />
       <Hero />
       <About />
+      {/* <WhyMarvel /> */}
       <Counter />
       <Partners />
       <Services />

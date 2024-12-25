@@ -6,25 +6,34 @@ import "slick-carousel/slick/slick-theme.css";
 const Testimonials = () => {
   const testimonials = [
     {
-      quote:
-        "This is an amazing product! It has completely transformed the way I work. Highly recommended. ",
-      name: "Jessica Smith",
-      role: "Product Marketer @Google",
-      image: "https://via.placeholder.com/80",
+      name: "Junayed Bin Sagir",
+      role: "Masters in Business Analytics, University of Wollongong",
+      scholarship: "30% Scholarship",
+      intake: "July 2024",
+      image:
+        "https://res.cloudinary.com/dedntczjt/image/upload/v1735115086/Junayed_Bin_Sagir.jpg",
+      description:
+        "Working with Marvel Studies felt like having the best team on my side. From the start, they gave me precise guidance for my studies in Australia. The process was smooth, and their strategic approach helped me secure a scholarship and an amazing opportunity. I'm ready to begin this exciting journey thanks to their support!",
     },
     {
-      quote:
-        "I can't imagine my daily workflow without it. It's intuitive, fast, and reliable!",
-      name: "Craig Norton",
-      role: "Software Engineer @Amazon",
-      image: "https://via.placeholder.com/80",
+      name: "Hasan Mohammad Arafat",
+      role: "MSc Research International Business, University of Gloucestershire ",
+      scholarship: "£2000 Scholarship",
+      intake: "January 2024",
+      image:
+        "https://res.cloudinary.com/dedntczjt/image/upload/v1735115087/Hasan_Mohammad_Arafat.png",
+      description:
+        "Marvel Studies provided the guidance I needed to choose the right university and navigate the scholarship application process smoothly. Their expertise was crucial in securing my admission and scholarship. I couldn't be more excited to start my MBA journey in the UK thanks to their tireless support and direction.",
     },
     {
-      quote:
-        "Great experience so far! The team has done a fantastic job creating such a helpful tool.",
-      name: "Sophia Lee",
-      role: "UX Designer @Facebook",
-      image: "https://via.placeholder.com/80",
+      name: "Vabana Akther",
+      role: "MSc in Global Business Management, University of Roehampton",
+      scholarship: "£4500 Scholarship",
+      intake: "May 2024",
+      image:
+        "https://res.cloudinary.com/dedntczjt/image/upload/v1735115086/Vabana_Akther.jpg",
+      description:
+        "Finally going with my entire family to the UK being a student. A dream came true. Thank you so much Marvel Studies. You guys are truly avengers.",
     },
   ];
 
@@ -59,8 +68,11 @@ const Testimonials = () => {
               key={index}
               className="p-6 flex flex-col items-center text-center justify-center"
             >
+              <strong className="text-gray-800 text-xl block mb-2">
+                {testimonial.scholarship}
+              </strong>
               <blockquote className="text-lg text-gray-700 italic mb-4">
-                "{testimonial.quote}"
+                {testimonial.description}
               </blockquote>
               <img
                 src={testimonial.image}

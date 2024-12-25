@@ -4,40 +4,52 @@ import { useInView } from "react-intersection-observer";
 
 const servicesData = [
   {
-    title: "Web Development",
+    title: "Career Counseling",
     description:
-      "We build responsive and scalable web solutions tailored to your business needs, ensuring top performance and user experience.",
-    icon: "🌐",
+      "Our team channels the wisdom of Professor X, understanding your aspirations and helping you map out the perfect academic path. We help you discover your strengths and match them with the right courses and destinations.",
+    icon: "🧠",
   },
   {
-    title: "Mobile App Development",
+    title: "University Selection",
     description:
-      "Our mobile applications are designed to offer seamless functionality, captivating interfaces, and smooth performance.",
-    icon: "📱",
+      "Like Tony Stark crafting his suit, we meticulously analyze your goals and preferences to find the perfect university. Whether it’s the UK, USA, Australia, Denmark, or beyond, we ensure every detail fits your future.",
+    icon: "🤖",
   },
   {
-    title: "UI/UX Design",
+    title: "Application Assistance",
     description:
-      "We create user-centric designs that deliver exceptional digital experiences and drive customer engagement.",
-    icon: "🎨",
+      "Applying to universities can feel like a tangled web, but with our help, it’s a breeze. From filling out forms to crafting compelling personal statements, we ensure your application sticks out in the best way.",
+    icon: "🕸️",
   },
   {
-    title: "SEO Optimization",
+    title: "Scholarship Guidance",
     description:
-      "Boost your online visibility and drive organic traffic to your website with our advanced SEO strategies.",
-    icon: "🔍",
+      "Need financial support? We provide guidance on scholarships and funding opportunities, protecting your dreams like Cap’s indestructible shield.",
+    icon: "🛡️",
   },
   {
-    title: "Cloud Solutions",
+    title: "Visa Processing",
     description:
-      "Leverage the power of cloud computing to scale your business efficiently with our secure and innovative solutions.",
-    icon: "☁️",
+      "Navigating visa procedures can feel like entering another dimension, but we’ve got the magic touch. Like Doctor Strange, we open portals to your academic future by guiding you through every step of the process.",
+    icon: "🌀",
   },
   {
-    title: "Digital Marketing",
+    title: "Pre-Departure Assistance",
     description:
-      "Expand your brand's reach and engage your audience with our data-driven digital marketing services.",
-    icon: "📈",
+      "Moving to a new country can be overwhelming, but we arm you with everything you need to adapt and thrive. From cultural insights to travel tips, we ensure you’re ready to wield your full potential.",
+    icon: "⚒️",
+  },
+  {
+    title: "Post-Arrival Support",
+    description:
+      "Even after you arrive, we stay by your side. Whether it’s helping you settle in or connecting you with local communities, we embody Wakandan values of unity and care.",
+    icon: "🖤",
+  },
+  {
+    title: "Test Preparation",
+    description:
+      "From IELTS to GMAT, we help you smash through tests with confidence. Our tailored preparation strategies ensure you’re ready to ace any academic challenge.",
+    icon: "💪",
   },
 ];
 
@@ -64,12 +76,12 @@ const Services = () => {
       {/* Services Grid */}
       <div
         ref={ref}
-        className="container mx-auto px-4 lg:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+        className="mx-auto px-4 lg:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
       >
         {servicesData.map((service, index) => (
           <motion.div
             key={index}
-            className="flex flex-col items-center text-center bg-white rounded-lg p-8 hover:shadow-2xl hover:scale-105 transition-all duration-300"
+            className="flex flex-col items-center text-center bg-gray-50 rounded-lg p-8 hover:shadow-2xl hover:scale-105 transition-all duration-300"
             initial={{ opacity: 0, y: 30 }}
             animate={{
               opacity: inView ? 1 : 0,

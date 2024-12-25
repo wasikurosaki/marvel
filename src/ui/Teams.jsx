@@ -4,36 +4,40 @@ import imtial from "../assets/Khondaker Imtial (COO).jpeg";
 
 const teamMembers = [
   {
-    name: "John Doe",
+    name: "Khondaker Imtial",
     designation1: "Captain America",
     designation2: "COO",
     description:
       "As the Captain America of Marvel Studies, I lead with heart, integrity, and a mission to serve. I ensure that our operations run smoothly and that every student feels supported and valued. Like Steve Rogers, I believe in teamwork and resilience. Together, we’ll face any challenge and ensure your success abroad. At Marvel Studies, we’re here to fight for your dreams, one step at a time—always standing by your side.",
-    imgUrl: imtial,
+    imgUrl:
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735111597/Khondaker_Imtial_COO_Background_Removed.png",
   },
   {
-    name: "Jane Smith",
-    designation1: "Captain America",
-    designation2: "COO",
+    name: "Koushequzzamn",
+    designation1: "Tony Stark",
+    designation2: "CEO",
     description:
-      "As the Captain America of Marvel Studies, I lead with heart, integrity, and a mission to serve. I ensure that our operations run smoothly and that every student feels supported and valued. Like Steve Rogers, I believe in teamwork and resilience. Together, we’ll face any challenge and ensure your success abroad. At Marvel Studies, we’re here to fight for your dreams, one step at a time—always standing by your side.",
-    imgUrl: imtial,
+      "I’m the Tony Stark of Marvel Studies—always innovating, strategizing, and building the ultimate suit of solutions for our students. With a sharp focus on technology and precision, I ensure every aspect of our consultancy is streamlined to help you achieve your dreams. At Marvel Studies, we don’t just guide you; we empower you to become the hero of your own academic journey. Suit up and let’s conquer your future—whatever it takes!",
+    imgUrl:
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735111598/Koushequzzaman_CEO_Background_Removed.png",
   },
   {
-    name: "Michael Johnson",
-    designation1: "Captain America",
-    designation2: "COO",
+    name: "Hasan Faruk",
+    designation1: "DR BANNER",
+    designation2: "",
     description:
-      "As the Captain America of Marvel Studies, I lead with heart, integrity, and a mission to serve. I ensure that our operations run smoothly and that every student feels supported and valued. Like Steve Rogers, I believe in teamwork and resilience. Together, we’ll face any challenge and ensure your success abroad. At Marvel Studies, we’re here to fight for your dreams, one step at a time—always standing by your side.",
-    imgUrl: imtial,
+      "You can call me the Hulk of Marvel Studies—calm and strategic when tackling legalities, but ready to smash through any obstacles that come your way. From visa processes to regulatory challenges, I ensure that no paperwork or legal issue stands between you and your education. With me on your side, your academic journey will be unstoppable. Let’s smash your fears and build your future!",
+    imgUrl:
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735111598/Hasan_Faruk_Background_Removed.png",
   },
   {
-    name: "Emily Davis",
-    designation1: "Captain America",
+    name: "Mahadi Hasan",
+    designation1: "Thor Odinson",
     designation2: "COO",
     description:
-      "As the Captain America of Marvel Studies, I lead with heart, integrity, and a mission to serve. I ensure that our operations run smoothly and that every student feels supported and valued. Like Steve Rogers, I believe in teamwork and resilience. Together, we’ll face any challenge and ensure your success abroad. At Marvel Studies, we’re here to fight for your dreams, one step at a time—always standing by your side.",
-    imgUrl: imtial,
+      "I’m the Thor of Marvel Studies, wielding the financial hammer to ensure our students’ journeys are secure and supported. From scholarships to financial planning, I bring the power and balance needed to make your dream of studying abroad a reality. Just like Thor protects Asgard, I’m here to protect your aspirations and clear the path for your success. Let’s bring the thunder to your academic goals!",
+    imgUrl:
+      "https://res.cloudinary.com/dedntczjt/image/upload/v1735111599/Mahadi_Hasan_Background_Removed.png",
   },
 ];
 
