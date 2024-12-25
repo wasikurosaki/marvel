@@ -24,7 +24,7 @@ const teamMembers = [
 
   {
     name: "Hasan Faruk",
-    designation1: "( DR BANNER )",
+    designation1: "( DR Banner )",
     designation2: "Managing Partner",
     description:
       "You can call me the Hulk of Marvel Studies—calm and strategic when tackling legalities, but ready to smash through any obstacles that come your way. From visa processes to regulatory challenges, I ensure that no paperwork or legal issue stands between you and your education. With me on your side, your academic journey will be unstoppable. Let’s smash your fears and build your future!",
