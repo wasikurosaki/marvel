@@ -7,7 +7,7 @@ import serviceIcon1 from "../assets/accomadation.svg"; // Example service icons
 import serviceIcon2 from "../assets/health.svg";
 import serviceIcon3 from "../assets/test.svg";
 import serviceIcon4 from "../assets/passport.svg";
-import serviceIcon5 from "../assets/edu.png";
+import serviceIcon5 from "../assets/education.png";
 
 const services = [
   {
@@ -42,14 +42,14 @@ const services = [
     bgColor: "bg-yellow-100", // Tailwind class for pastel yellow
     txt: "Captain America guides you through scholarship and funding opportunities.",
   },
-  {
-    id: 5,
-    icon: serviceIcon5,
-    label: "Educatoin Counselling",
-    target: "#service5",
-    bgColor: "bg-purple-100", // Tailwind class for pastel purple
-    txt: "Doctor Strange helps you navigate visa procedures for your future.",
-  },
+  // {
+  //   id: 5,
+  //   icon: serviceIcon5,
+  //   label: "Educatoin Counselling",
+  //   target: "#service5",
+  //   bgColor: "bg-purple-100", // Tailwind class for pastel purple
+  //   txt: "Doctor Strange helps you navigate visa procedures for your future.",
+  // },
   // {
   //   id: 8,
   //   icon: serviceIcon2,
@@ -121,17 +121,17 @@ const Hero = () => {
         </div>
 
         {/* Right Section (Slider) */}
-        {/* <div className="block md:w-[300px] w-[200px] mt-8 md:mt-0 md:mr-32 mr-0">
+        <div className="block md:w-[300px] w-[200px] mt-8 md:mt-0 md:mr-32 mr-0">
           <Slider {...sliderSettings}>
             {services.map((service) => (
               <a href="#services">
                 <motion.div
-                  whileHover={{ y: -8 }} // Rise up on hover
+                  whileHover={{ y: -4 }} // Rise up on hover
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <div className=" flex justify-center mb-4 mt-2">
                     <img
-                      className="w-24 md:w-[10rem] h-auto object-contain my-[-30px]"
+                      className="w-[12rem] md:w-[14rem] h-auto object-contain my-[-30px]"
                       src={service.icon}
                       alt={service.label}
                     />
@@ -140,7 +140,7 @@ const Hero = () => {
               </a>
             ))}
           </Slider>
-        </div> */}
+        </div>
       </div>
     </div>
   );
