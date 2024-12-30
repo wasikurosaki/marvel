@@ -3,15 +3,17 @@ import { motion } from "framer-motion";
 import Slider from "react-slick";
 import classNames from "classnames";
 import heroImage from "../assets/Text on plane on.png";
-import serviceIcon1 from "../assets/Marvel Studies Final PNG-01.png"; // Example service icons
-import serviceIcon2 from "../assets/Marvel Studies Final PNG-01.png";
-import serviceIcon3 from "../assets/Marvel Studies Final PNG-01.png";
+import serviceIcon1 from "../assets/accomadation.svg"; // Example service icons
+import serviceIcon2 from "../assets/health.svg";
+import serviceIcon3 from "../assets/test.svg";
+import serviceIcon4 from "../assets/passport.svg";
+import serviceIcon5 from "../assets/edu.png";
 
 const services = [
   {
     id: 1,
     icon: serviceIcon1,
-    label: "Career Counseling",
+    label: "Accomadation",
     target: "#service1",
     bgColor: "bg-red-100", // Tailwind class for pastel red
     txt: "Professor X helps map your academic path and match you with the right courses.",
@@ -19,7 +21,7 @@ const services = [
   {
     id: 2,
     icon: serviceIcon2,
-    label: "University Selection",
+    label: "Health Care",
     target: "#service2",
     bgColor: "bg-green-100", // Tailwind class for pastel green
     txt: "Iron Man's precision helps you find the perfect university for your goals.",
@@ -27,42 +29,26 @@ const services = [
   {
     id: 3,
     icon: serviceIcon3,
-    label: "Application Assistance",
+    label: "Test Assistance",
     target: "#service3",
     bgColor: "bg-blue-100", // Tailwind class for pastel blue
     txt: "Spider-Man helps you with forms and personal statements to stand out.",
   },
   {
     id: 4,
-    icon: serviceIcon1,
-    label: "Scholarship Guidance",
+    icon: serviceIcon4,
+    label: "Visa Processing",
     target: "#service4",
     bgColor: "bg-yellow-100", // Tailwind class for pastel yellow
     txt: "Captain America guides you through scholarship and funding opportunities.",
   },
   {
     id: 5,
-    icon: serviceIcon2,
-    label: "Visa Processing",
+    icon: serviceIcon5,
+    label: "Educatoin Counselling",
     target: "#service5",
     bgColor: "bg-purple-100", // Tailwind class for pastel purple
     txt: "Doctor Strange helps you navigate visa procedures for your future.",
-  },
-  {
-    id: 6,
-    icon: serviceIcon3,
-    label: "Pre-Departure Assistance",
-    target: "#service6",
-    bgColor: "bg-pink-100", // Tailwind class for pastel pink
-    txt: "Thor provides tips and insights to help you adapt and thrive.",
-  },
-  {
-    id: 7,
-    icon: serviceIcon1,
-    label: "Post-Arrival Support",
-    target: "#service7",
-    bgColor: "bg-teal-100", // Tailwind class for pastel teal
-    txt: "Black Panther supports your settlement and community connections.",
   },
   // {
   //   id: 8,
@@ -142,26 +128,14 @@ const Hero = () => {
                 <motion.div
                   whileHover={{ y: -8 }} // Rise up on hover
                   transition={{ type: "spring", stiffness: 300 }}
-                  key={service.id}
-                  className={classNames(
-                    "flex flex-col items-center justify-center rounded-xl  my-8 h-[200px]",
-                    service.bgColor // Dynamic Tailwind class for background color
-                  )}
                 >
                   <div className=" flex justify-center mb-4 mt-2">
                     <img
-                      className="w-24 md:w-32 h-auto object-contain my-[-30px]"
+                      className="w-24 md:w-[10rem] h-auto object-contain my-[-30px]"
                       src={service.icon}
                       alt={service.label}
                     />
                   </div>
-
-                  <h1 className="text-lg md:text-xl font-semibold pb-2 text-center text-[#30315f] mt-10  ">
-                    {service.label}
-                  </h1>
-                  <p className="text-sm md:text-md text-[30315f] font-semibold px-4 pb-6 text-center">
-                    Learn More!
-                  </p>
                 </motion.div>
               </a>
             ))}
